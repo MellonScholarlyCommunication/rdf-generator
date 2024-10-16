@@ -1,0 +1,16 @@
+{
+  "name": "rdf-generator",
+  "version": "1.0.0",
+  "description": "A RML rdf generator from Event Notification data",
+  "main": "lib/index.js",
+  "author": "Patrick Hochstenbach <Patrick.Hochstenbach@UGent.be>",
+  "license": "MIT",
+  "dependencies": {
+    "@rmlio/rmlmapper-java-wrapper": "^2.1.2",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "n3": "^1.22.3",
+    "node-fetch": "2.7.0",
+    "uuid": "^10.0.0"
+  }
+}

@@ -5,6 +5,9 @@
   "main": "lib/index.js",
   "author": "Patrick Hochstenbach <Patrick.Hochstenbach@UGent.be>",
   "license": "MIT",
+  "scripts": {
+    "download:rmlmapper": "node node_modules/@rmlio/rmlmapper-java-wrapper/lib/download-latest-rmlmapper.js"
+  },
   "dependencies": {
     "@rmlio/rmlmapper-java-wrapper": "^2.1.2",
     "commander": "^12.1.0",

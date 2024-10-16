@@ -2,6 +2,8 @@
 
 A script to generate RDF data from [CSL](https://docs.citationstyles.org/en/stable/specification.html#csl-1-0-2-specification) (Citation Style Language) data or [Event Notifications](https://www.eventnotifications.net) that point to CSL data. 
 
+For the mapping we use RDF Mapping Language from [RML.io](https://rml.io).
+
 ## Install
 
 ```

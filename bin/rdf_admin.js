@@ -16,66 +16,73 @@ program
 
 program
     .command('csl2rdf')
-    .argument('<file>','CSL citation file or URL')
+    .argument('<file...>','CSL citation file or URL')
     .action( async(file) => {
-        const opts = program.opts();
-        const rmlmapperPath = fsPath.resolve(opts.jar);
-        const rmlmappingPath = fsPath.resolve(opts.map);
-        const tempFolderPath = fsPath.resolve(opts.tmp);
+        for (let i = 0 ; i < file.length ; i++) {
+            const ref = file[i];
 
-        let data;
+            const opts = program.opts();
+            const rmlmapperPath = fsPath.resolve(opts.jar);
+            const rmlmappingPath = fsPath.resolve(opts.map);
+            const tempFolderPath = fsPath.resolve(opts.tmp);
 
-        if (file.match(/^http/)) {
-            data = await resolve(file);
+            let data;
+
+            if (ref.match(/^http/)) {
+                data = await resolve(ref);
+            }
+            else {
+                data = JSON.parse(fs.readFileSync(ref,'utf-8'));
+            }
+
+            const map = fs.readFileSync(rmlmappingPath,'utf-8');
+            
+            const param = {
+                rmlMapper : rmlmapperPath ,
+                rmlMap : map,
+                tmp : tempFolderPath
+            };
+
+            const quads = await generateQuads(data, param);
+
+            console.log(await serializeQuads(quads, { format: 'nquads' }));
         }
-        else {
-            data = JSON.parse(fs.readFileSync(file,'utf-8'));
-        }
-
-        const map = fs.readFileSync(rmlmappingPath,'utf-8');
-        
-        const param = {
-            rmlMapper : rmlmapperPath ,
-            rmlMap : map,
-            tmp : tempFolderPath
-        };
-
-        const quads = await generateQuads(data, param);
-
-        console.log(await serializeQuads(quads, { format: 'nquads' }));
     });
 
 program
     .command('event2rdf')
-    .argument('<file>','Event file | URL')
+    .argument('<file...>','Event file | URL')
     .action( async(file) => {
-        const opts = program.opts();
-        const rmlmapperPath = fsPath.resolve(opts.jar);
-        const rmlmappingPath = fsPath.resolve(opts.map);
-        const tempFolderPath = fsPath.resolve(opts.tmp);
+        for (let i = 0 ; i < file.length ; i++) {
+            const ref = file[i];
+            const opts = program.opts();
+            const rmlmapperPath = fsPath.resolve(opts.jar);
+            const rmlmappingPath = fsPath.resolve(opts.map);
+            const tempFolderPath = fsPath.resolve(opts.tmp);
 
-        let data;
+            let data;
 
-        if (file.match(/^http/)) {
-            data = await resolve(file);
+            if (ref.match(/^http/)) {
+                data = await resolve(ref);
+            }
+            else {
+                data = JSON.parse(fs.readFileSync(ref,'utf-8'));
+            }
+
+            const referred_csl = await resolve(data.object.id);
+
+            const map = fs.readFileSync(rmlmappingPath,'utf-8');
+            
+            const param = {
+                rmlMapper : rmlmapperPath ,
+                rmlMap : map,
+                tmp : tempFolderPath
+            };
+
+            const quads = await generateQuads(referred_csl, param);
+
+            console.log(await serializeQuads(quads, { format: 'nquads' }));
         }
-        else {
-            data = JSON.parse(fs.readFileSync(file,'utf-8'));
-        }
-
-        const referred_csl = await resolve(data.object.id);
-
-        const map = fs.readFileSync(rmlmappingPath,'utf-8');
-        
-        const param = {
-            rmlMapper : rmlmapperPath ,
-            rmlMap : map,
-            tmp : tempFolderPath
-        };
-
-        const quads = await generateQuads(referred_csl, param);
-
-        console.log(await serializeQuads(quads, { format: 'application/trig' }));
     });
 
 program.parse();

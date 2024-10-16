@@ -2,7 +2,7 @@
 const { program } = require('commander');
 
 const fetch = require('node-fetch');
-const { generateQuads, serializeQuads, mainSubjects } = require('../lib/index');
+const { generateQuads, serializeQuads, annotateByOrigin } = require('../lib/index');
 const fs = require('fs');
 const fsPath = require('path');
 
@@ -26,14 +26,7 @@ program
             const rmlmappingPath = fsPath.resolve(opts.map);
             const tempFolderPath = fsPath.resolve(opts.tmp);
 
-            let data;
-
-            if (ref.match(/^http/)) {
-                data = await resolve(ref);
-            }
-            else {
-                data = JSON.parse(fs.readFileSync(ref,'utf-8'));
-            }
+            const data = await resolve(ref);
 
             const map = fs.readFileSync(rmlmappingPath,'utf-8');
             
@@ -51,49 +44,50 @@ program
 
 program
     .command('event2rdf')
-    .argument('<file...>','Event file | URL')
-    .action( async(file) => {
-        for (let i = 0 ; i < file.length ; i++) {
-            const ref = file[i];
-            const opts = program.opts();
-            const rmlmapperPath = fsPath.resolve(opts.jar);
-            const rmlmappingPath = fsPath.resolve(opts.map);
-            const tempFolderPath = fsPath.resolve(opts.tmp);
+    .option('--origin <origin>','Original Event')
+    .argument('<file>','Event file | URL')
+    .action( async(file,opts) => {
+        const all_opts = { ...opts, ...program.opts() };
+        const rmlmapperPath = fsPath.resolve(all_opts.jar);
+        const rmlmappingPath = fsPath.resolve(all_opts.map);
+        const tempFolderPath = fsPath.resolve(all_opts.tmp);
 
-            let data;
+        const data = await resolve(file);
 
-            if (ref.match(/^http/)) {
-                data = await resolve(ref);
-            }
-            else {
-                data = JSON.parse(fs.readFileSync(ref,'utf-8'));
-            }
+        const referred_csl = await resolve(data.object.id);
 
-            const referred_csl = await resolve(data.object.id);
-
-            const map = fs.readFileSync(rmlmappingPath,'utf-8');
+        const map = fs.readFileSync(rmlmappingPath,'utf-8');
             
-            const param = {
-                rmlMapper : rmlmapperPath ,
-                rmlMap : map,
-                tmp : tempFolderPath
-            };
+        const param = {
+            rmlMapper : rmlmapperPath ,
+            rmlMap : map,
+            tmp : tempFolderPath
+        };
 
-            const quads = await generateQuads(referred_csl, param);
+        let quads = await generateQuads(referred_csl, param);
 
-            console.log(await serializeQuads(quads, { format: 'nquads' }));
+        if (opts.origin) {
+            const origin = await resolve(opts.origin);
+            quads = annotateByOrigin(quads,origin);
         }
+
+        console.log(await serializeQuads(quads, { format: 'application/trig' }));
     });
 
 program.parse();
 
-async function resolve(url) {
-    const res = await fetch(url);
+async function resolve(ref) {
+    if (ref.match(/^http/)) {
+        const res = await fetch(ref);
 
-    if (res.ok) {
-        return await res.json();
+        if (res.ok) {
+            return await res.json();
+        }
+        else {
+            console.error(`failed to fetch ${ref} : ${res.statusText}`);
+        }
     }
-    else {cur
-        console.error(`failed to fetch ${url} : ${res.statusText}`);
+    else {
+        return JSON.parse(fs.readFileSync(ref,'utf-8'));
     }
 }

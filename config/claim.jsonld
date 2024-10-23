@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "@vocab": "https://schema.org/",
+        "schema": "https://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "about": {
+          "@id": "schema:about",
+          "@type": "@id",
+          "@container": [
+            "@graph",
+            "@id"
+          ]
+        },
+        "mainEntity": {
+          "@id": "schema:mainEntity",
+          "@type": "@id"
+        }
+    },
+    "@type": "Claim" 
+}

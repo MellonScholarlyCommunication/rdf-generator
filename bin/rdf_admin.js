@@ -16,8 +16,17 @@ program
 
 program
     .command('csl2rdf')
+    .option('-f,--format <format>','output format','application/n-quads')
+    .option('-r,--frame <frame>','jsonld frame')
     .argument('<file...>','CSL citation file or URL')
-    .action( async(file) => {
+    .action( async(file,opts) => {
+        const format = opts.format;
+        let frame;
+
+        if (opts.frame) {
+            frame = JSON.parse(fs.readFileSync(opts.frame,'utf8'));
+        }
+
         for (let i = 0 ; i < file.length ; i++) {
             const ref = file[i];
 
@@ -38,12 +47,14 @@ program
 
             const quads = await generateQuads(data, param);
 
-            console.log(await serializeQuads(quads, { format: 'nquads' }));
+            console.log(await serializeQuads(quads, { format: format , frame: frame }));
         }
     });
 
 program
     .command('event2rdf')
+    .option('-f,--format <format>','output format','application/trig')
+    .option('-r,--frame <frame>','jsonld frame')
     .option('--origin <origin>','Original Event')
     .argument('<file>','Event file | URL')
     .action( async(file,opts) => {
@@ -51,6 +62,12 @@ program
         const rmlmapperPath = fsPath.resolve(all_opts.jar);
         const rmlmappingPath = fsPath.resolve(all_opts.map);
         const tempFolderPath = fsPath.resolve(all_opts.tmp);
+
+        let frame;
+
+        if (opts.frame) {
+            frame = JSON.parse(fs.readFileSync(opts.frame,'utf8'));
+        }
 
         const data = await resolve(file);
 
@@ -71,7 +88,7 @@ program
             quads = annotateByOrigin(quads,origin);
         }
 
-        console.log(await serializeQuads(quads, { format: 'application/trig' }));
+        console.log(await serializeQuads(quads, { format: opts.format , frame: frame }));
     });
 
 program.parse();

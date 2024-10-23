@@ -1,0 +1,31 @@
+<urn:uuid:9e0c9483-9fea-4cde-8ebc-a923dc890510> {
+<https://scipost.org/submissions/scipost_202408_00008v1/> a <http://purl.org/net/xbiblio/csl#article-journal>;
+    <https://schema.org/abstract> "SciPost Submission Detail Adiabatic gauge potential and integrability breaking with free fermions";
+    <https://schema.org/author> <urn:uuid:69d4d007-39a1-4753-a56a-1b8e94a0e890>, <urn:uuid:7e5c81c2-5ca9-4427-bfab-8a44a23902fb>, <urn:uuid:91685728-f1e5-4f70-96e6-a0c105709f1c>, <urn:uuid:9724952f-de18-4854-971a-1cf43f7373fa>;
+    <https://schema.org/datePublished> "2024";
+    <https://schema.org/language> "en";
+    <https://schema.org/title> "Adiabatic gauge potential and integrability breaking with free fermions".
+<urn:uuid:69d4d007-39a1-4753-a56a-1b8e94a0e890> a <https://schema.org/Person>;
+    <https://schema.org/familyName> "Pozsgay";
+    <https://schema.org/givenName> "Balázs".
+<urn:uuid:7e5c81c2-5ca9-4427-bfab-8a44a23902fb> a <https://schema.org/Person>;
+    <https://schema.org/familyName> "Sharipov";
+    <https://schema.org/givenName> "Rustem".
+<urn:uuid:91685728-f1e5-4f70-96e6-a0c105709f1c> a <https://schema.org/Person>;
+    <https://schema.org/familyName> "Vona";
+    <https://schema.org/givenName> "István".
+<urn:uuid:9724952f-de18-4854-971a-1cf43f7373fa> a <https://schema.org/Person>;
+    <https://schema.org/familyName> "Tiutiakina";
+    <https://schema.org/givenName> "Anastasiia"
+}
+<urn:uuid:4e1e5edf-25b3-4bb9-9187-b76159e84d60> a <https://schema.org/Claim>;
+    <https://schema.org/about> <urn:uuid:9e0c9483-9fea-4cde-8ebc-a923dc890510>;
+    <https://schema.org/creator> <https://mastodon.social/@patrickhochstenbach>.
+<https://mastodon.social/@patrickhochstenbach> a <https://schema.org/Person>;
+    <https://schema.org/name> "patrickhochstenbach".
+<urn:uuid:4e1e5edf-25b3-4bb9-9187-b76159e84d60> <https://schema.org/sdPublisher> <https://mycontributions.info/service/m/profile/card#me>.
+<https://mycontributions.info/service/m/profile/card#me> a <https://schema.org/Service>;
+    <https://schema.org/name> "Mastodon Bot".
+<urn:uuid:4e1e5edf-25b3-4bb9-9187-b76159e84d60> <https://schema.org/sdDatePublished> "2024-09-30T10:51:41.000Z";
+    <https://schema.org/mainEntity> <https://scipost.org/submissions/scipost_202408_00008v1/>.
+

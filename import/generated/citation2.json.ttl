@@ -1,0 +1,22 @@
+<https://scipost.org/submissions/scipost_202408_00008v1/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/net/xbiblio/csl#article-journal> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/abstract> "SciPost Submission Detail Adiabatic gauge potential and integrability breaking with free fermions" .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/author> <urn:uuid:25f0029a-7371-49ad-9839-c02a2536fc42> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/author> <urn:uuid:a0519837-b01f-470d-875f-80538a13274a> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/author> <urn:uuid:ab34eea4-4348-441f-8bd3-2be4ad50055a> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/author> <urn:uuid:baec59d6-f5ff-4e3b-baa8-0e9ab5c07f72> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/datePublished> "2024" .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/language> "en" .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/title> "Adiabatic gauge potential and integrability breaking with free fermions" .
+<urn:uuid:25f0029a-7371-49ad-9839-c02a2536fc42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:25f0029a-7371-49ad-9839-c02a2536fc42> <https://schema.org/familyName> "Tiutiakina" .
+<urn:uuid:25f0029a-7371-49ad-9839-c02a2536fc42> <https://schema.org/givenName> "Anastasiia" .
+<urn:uuid:a0519837-b01f-470d-875f-80538a13274a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:a0519837-b01f-470d-875f-80538a13274a> <https://schema.org/familyName> "Vona" .
+<urn:uuid:a0519837-b01f-470d-875f-80538a13274a> <https://schema.org/givenName> "István" .
+<urn:uuid:ab34eea4-4348-441f-8bd3-2be4ad50055a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:ab34eea4-4348-441f-8bd3-2be4ad50055a> <https://schema.org/familyName> "Pozsgay" .
+<urn:uuid:ab34eea4-4348-441f-8bd3-2be4ad50055a> <https://schema.org/givenName> "Balázs" .
+<urn:uuid:baec59d6-f5ff-4e3b-baa8-0e9ab5c07f72> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:baec59d6-f5ff-4e3b-baa8-0e9ab5c07f72> <https://schema.org/familyName> "Sharipov" .
+<urn:uuid:baec59d6-f5ff-4e3b-baa8-0e9ab5c07f72> <https://schema.org/givenName> "Rustem" .
+

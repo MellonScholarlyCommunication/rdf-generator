@@ -10,6 +10,7 @@
     "demo": "./bin/rdf_admin.js event2rdf --origin=import/event1-origin.json import/event1.json",
     "database:init": "npx event_admin init",
     "database:import": "./bin/rdf_admin.js import",
+    "database:import:overwrite": "./bin/rdf_admin.js import --overwrite",
     "database:export": "npx event_admin export --intention rdf",
     "event_admin": "npx event_admin"
   },

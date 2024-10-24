@@ -8,10 +8,8 @@ For the mapping we use RDF Mapping Language from [RML.io](https://rml.io).
 
 ```
 yarn install
-```
-
-```
 yarn run download:rmlmapper
+npm link eventlog-server
 ```
 
 ```
@@ -58,6 +56,35 @@ cp .env-example .env
     <https://schema.org/mainEntity> <https://scipost.org/submissions/scipost_202408_00008v1/>.
 ```
 
+## Create a claim database
+
+Create the database:
+
+```
+yarn -s database:init
+```
+
+Import data from the cache database:
+
+```
+yarn -s database:import
+```
+
+Export all claims as JSONLD
+
+```
+yarn -s database:export
+```
+
 ## Config
 
-The [RML](https://rml.io) mapping file used for CSL to RDF mapping can be found in `./mapping.ttl`.
+The [RML](https://rml.io) mapping file used for CSL to RDF mapping can be found in `./config/mapping.ttl`.
+
+The JSON-LD frame for the claims can be found in `./config/claim.jsonld` and is published online as https://mycontributions.info/contexts/claim.jsonld
+
+- `CACHE_NAME` : the name of the main event notification cache table
+- `POSTGRES_*` : database connection parameters
+- `RMLMAPPER` : the path to the RML mapper JAR file
+- `RMLMAP` : the RML map to used to generate RDF from CSL
+- `TEMPDIR` : a temporary process directory
+- `CONTEXT_URL` : the URL of the published JSON-LD frame for claims

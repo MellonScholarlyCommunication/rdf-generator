@@ -21,7 +21,7 @@
   ];
 
   rr:subjectMap [ 
-    rml:reference "URL" 
+    rml:reference "mainTopic" 
   ]; 
 
   rr:predicateObjectMap [ 

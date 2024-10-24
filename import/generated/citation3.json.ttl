@@ -1,23 +1,23 @@
 <http://hdl.handle.net/1854/LU-480375> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/net/xbiblio/csl#paper-conference> .
 <http://hdl.handle.net/1854/LU-480375> <https://schema.org/abstract> "This paper focuses on the multifaceted use of the OAI-PMH in a repository architecture designed to store digital assets at the Research Library of the Los Alamos National Laboratory (LANL), and to make the stored assets available in a uniform way to various downstream applications. In the architecture, the MPEG-21 Digital Item Declaration Language is used as the XML-based format to represent complex digital objects. Upon ingestion, these objects are stored in a multitude of autonomous OAI-PMH repositories. An OAI-PMH compliant Repository Index keeps track of the creation and location of all those repositories, whereas an Identifier Resolver keeps track of the location of individual objects. An OAI-PMH Federator is introduced as a single-point-of-access to downstream harvesters. It hides the complexity of the environment to those harvesters, and allows them to obtain transformations of stored objects. While the proposed architecture is described in the context of the LANL library, the paper will also touch on its more general applicability." .
-<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:22dd2bdb-afd4-4f9e-80b5-4cbbd77547dc> .
-<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:c7e64832-2def-4f3d-b625-9fddfa879956> .
-<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:d7da910b-657f-4aae-af18-efc8af80eaa1> .
-<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:d92ba868-3909-4f6f-bafd-dbeafbca20df> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:161386ef-0c82-4352-bfe2-d951078bfaa5> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:3bf06311-af6a-4730-a576-f23d3da64916> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:4210dc98-2320-4838-b37e-d70d1a9fc8dc> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:c5e0ad66-521c-4a9f-8b53-fdd06961dfcd> .
 <http://hdl.handle.net/1854/LU-480375> <https://schema.org/datePublished> "2004" .
 <http://hdl.handle.net/1854/LU-480375> <https://schema.org/language> "eng" .
 <http://hdl.handle.net/1854/LU-480375> <https://schema.org/publication> "JCDL 2004" .
 <http://hdl.handle.net/1854/LU-480375> <https://schema.org/title> "The multi-faceted use of the OAI-PMH in the LANL Repository" .
-<urn:uuid:22dd2bdb-afd4-4f9e-80b5-4cbbd77547dc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
-<urn:uuid:22dd2bdb-afd4-4f9e-80b5-4cbbd77547dc> <https://schema.org/familyName> "Hochstenbach" .
-<urn:uuid:22dd2bdb-afd4-4f9e-80b5-4cbbd77547dc> <https://schema.org/givenName> "Patrick" .
-<urn:uuid:c7e64832-2def-4f3d-b625-9fddfa879956> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
-<urn:uuid:c7e64832-2def-4f3d-b625-9fddfa879956> <https://schema.org/familyName> "Van de Sompel" .
-<urn:uuid:c7e64832-2def-4f3d-b625-9fddfa879956> <https://schema.org/givenName> "Herbert" .
-<urn:uuid:d7da910b-657f-4aae-af18-efc8af80eaa1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
-<urn:uuid:d7da910b-657f-4aae-af18-efc8af80eaa1> <https://schema.org/familyName> "Liu" .
-<urn:uuid:d7da910b-657f-4aae-af18-efc8af80eaa1> <https://schema.org/givenName> "Xiaoming" .
-<urn:uuid:d92ba868-3909-4f6f-bafd-dbeafbca20df> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
-<urn:uuid:d92ba868-3909-4f6f-bafd-dbeafbca20df> <https://schema.org/familyName> "Jerez" .
-<urn:uuid:d92ba868-3909-4f6f-bafd-dbeafbca20df> <https://schema.org/givenName> "Henry" .
+<urn:uuid:161386ef-0c82-4352-bfe2-d951078bfaa5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:161386ef-0c82-4352-bfe2-d951078bfaa5> <https://schema.org/familyName> "Hochstenbach" .
+<urn:uuid:161386ef-0c82-4352-bfe2-d951078bfaa5> <https://schema.org/givenName> "Patrick" .
+<urn:uuid:3bf06311-af6a-4730-a576-f23d3da64916> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:3bf06311-af6a-4730-a576-f23d3da64916> <https://schema.org/familyName> "Jerez" .
+<urn:uuid:3bf06311-af6a-4730-a576-f23d3da64916> <https://schema.org/givenName> "Henry" .
+<urn:uuid:4210dc98-2320-4838-b37e-d70d1a9fc8dc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:4210dc98-2320-4838-b37e-d70d1a9fc8dc> <https://schema.org/familyName> "Liu" .
+<urn:uuid:4210dc98-2320-4838-b37e-d70d1a9fc8dc> <https://schema.org/givenName> "Xiaoming" .
+<urn:uuid:c5e0ad66-521c-4a9f-8b53-fdd06961dfcd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:c5e0ad66-521c-4a9f-8b53-fdd06961dfcd> <https://schema.org/familyName> "Van de Sompel" .
+<urn:uuid:c5e0ad66-521c-4a9f-8b53-fdd06961dfcd> <https://schema.org/givenName> "Herbert" .
 

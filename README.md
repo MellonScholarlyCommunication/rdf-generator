@@ -12,6 +12,8 @@ yarn run download:rmlmapper
 npm link eventlog-server
 ```
 
+## Configuration
+
 ```
 cp .env-example .env
 ```

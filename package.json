@@ -12,7 +12,7 @@
     "database:import": "./bin/rdf_admin.js import",
     "database:import:overwrite": "./bin/rdf_admin.js import --overwrite",
     "database:export": "npx event_admin export --intention rdf",
-    "cache_admin": "npx event_admin",
+    "cache-admin": "npx event_admin",
     "real-clean": "npx event_admin remove-all"
   },
   "dependencies": {

@@ -1,11 +1,13 @@
 #!/bin/bash
 
+echo "[processing : csl2rdf import/citation*.json]"
 for f in import/citation*.json; do
     base=$(basename $f)
     echo "${base}..."
     ./bin/rdf_admin.js csl2rdf $f > import/generated/${base}.ttl
 done
 
+echo "[processing : event2rdf import/event*.json]"
 for f in import/event*.json; do
     base=$(basename $f)
     fragment=$(echo $base | sed -e 's/.json//')

@@ -12,7 +12,8 @@
     "database:import": "./bin/rdf_admin.js import",
     "database:import:overwrite": "./bin/rdf_admin.js import --overwrite",
     "database:export": "npx event_admin export --intention rdf",
-    "event_admin": "npx event_admin"
+    "cache_admin": "npx event_admin",
+    "real-clean": "npx event_admin remove-all"
   },
   "dependencies": {
     "@rmlio/rmlmapper-java-wrapper": "^2.1.2",

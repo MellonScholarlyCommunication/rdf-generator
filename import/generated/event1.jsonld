@@ -21,34 +21,34 @@
   "id": "urn:uuid:4e1e5edf-25b3-4bb9-9187-b76159e84d60",
   "type": "Claim",
   "about": {
-    "urn:uuid:d50b810b-d8ac-4c85-920c-bb65ce65bca5": {
+    "urn:uuid:2805575d-207d-46f8-bbba-78e572bdca63": {
       "id": "https://scipost.org/submissions/scipost_202408_00008v1/",
       "type": "http://purl.org/net/xbiblio/csl#article-journal",
       "abstract": "SciPost Submission Detail Adiabatic gauge potential and integrability breaking with free fermions",
       "author": [
         {
-          "id": "urn:uuid:110252f4-c849-420c-a5a9-1e6f2871e2a1",
-          "type": "Person",
-          "familyName": "Pozsgay",
-          "givenName": "Balázs"
-        },
-        {
-          "id": "urn:uuid:21c35c3b-0974-44b6-8585-87ab81918efa",
+          "id": "urn:uuid:19e4f42b-4a86-4eec-aa92-598b0df8a486",
           "type": "Person",
           "familyName": "Sharipov",
           "givenName": "Rustem"
         },
         {
-          "id": "urn:uuid:2b24e240-e587-4592-bf33-ac3e4982656d",
+          "id": "urn:uuid:77550e81-f86e-4ec4-a2e0-16e1ab3d4f22",
           "type": "Person",
           "familyName": "Tiutiakina",
           "givenName": "Anastasiia"
         },
         {
-          "id": "urn:uuid:8afc80e8-8414-473e-be25-3ee0ed43c41c",
+          "id": "urn:uuid:946e9399-f4ef-4e68-b9ab-775038f9557f",
           "type": "Person",
           "familyName": "Vona",
           "givenName": "István"
+        },
+        {
+          "id": "urn:uuid:ddae66fc-35b8-4057-a689-183e8d2fc046",
+          "type": "Person",
+          "familyName": "Pozsgay",
+          "givenName": "Balázs"
         }
       ],
       "datePublished": "2024",

@@ -78,6 +78,28 @@ Export all claims as JSONLD
 yarn -s database:export
 ```
 
+## Remove all data 
+
+```
+yarn real-clean
+```
+
+## Generate demonstration data
+
+The `make_generated.sh` creates Turtle from CSL files `import/citation*.json` and JSON-LD from `import/event*.json` files. The output is stored in `import/generated`.
+
+```
+./make_generated.sh
+```
+
+## Export the claims database to a public web address
+
+Make the claims database available as a JSONL and NQuads dump at http://localhost/exports/.
+
+```
+./export.sh
+```
+
 ## Config
 
 The [RML](https://rml.io) mapping file used for CSL to RDF mapping can be found in `./config/mapping.ttl`.

@@ -69,13 +69,13 @@ yarn -s database:init
 Import data from the cache database:
 
 ```
-yarn -s database:import
+yarn database:import
 ```
 
 Export all claims as JSONLD
 
 ```
-yarn -s database:export
+yarn database:export
 ```
 
 ## Remove all data 

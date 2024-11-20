@@ -6,7 +6,7 @@
 
 # Number of claims
 {
-   ( ?X { ?X a ?Claim . } ?L ) log:collectAllIn _:x .
+   ( ?X { ?X a schema:Claim . } ?L ) log:collectAllIn _:x .
    ?L list:length ?N .
 }
 =>
@@ -16,7 +16,7 @@
 
 # Which predicates where found
 {
-    ?X a ?Claim .
+    ?X a schema:Claim .
     ?X schema:about ?Y .
     ?S ?P ?O ?Y .
 }
@@ -41,7 +41,7 @@
 
 # Which types of claims were created
 {
-   ?X a ?Claim .
+   ?X a schema:Claim .
    ?X schema:about ?Y .
    ?S a ?Type ?Y .
 }

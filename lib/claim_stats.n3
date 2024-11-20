@@ -22,12 +22,12 @@
 }
 =>
 {
-   :result :predicates ?P .
+   :claim :predicate ?P .
 } .
 
 # Statistics about the predicates
 {
-   :result :predicates ?P .
+   :claim :predicate ?P .
    ( ?S { ?S ?P ?O ?Y } ?L ) log:collectAllIn _:x .
    ?L list:length ?N .
 
@@ -47,5 +47,19 @@
 }
 =>
 {
-   :claim a ?Type .
+   :claim :type ?Type .
+} .
+
+# Statistics about the predicates
+{
+   :claim :type ?O .
+   ( ?S { ?S ?P ?O ?Y } ?L ) log:collectAllIn _:x .
+   ?L list:length ?N .
+
+   :result :numberOfClaims ?Total .
+   ( ?N ?Total ) math:quotient ?Fraction .
+}
+=>
+{
+   :result :typeNum (?O ?N ?Fraction) .
 } .

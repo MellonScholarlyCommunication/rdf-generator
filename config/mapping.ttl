@@ -3,6 +3,7 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 @prefix ex: <http://example.com/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -139,6 +140,13 @@
   ];
 
   rr:predicateObjectMap [ 
+    rr:predicate dcterms:source; 
+    rr:objectMap [
+      rml:reference "source"
+    ]
+  ];
+
+  rr:predicateObjectMap [ 
     rr:predicate schema:status; 
     rr:objectMap [
       rml:reference "status"
@@ -172,10 +180,17 @@
     ]
   ];
 
-    rr:predicateObjectMap [ 
+  rr:predicateObjectMap [ 
     rr:predicate schema:familyName; 
     rr:objectMap [
       rml:reference "family"
+    ]
+  ];
+  
+  rr:predicateObjectMap [ 
+    rr:predicate schema:name; 
+    rr:objectMap [
+      rml:reference "literal"
     ]
   ];
 

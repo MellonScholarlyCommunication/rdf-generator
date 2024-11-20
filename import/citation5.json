@@ -1,0 +1,34 @@
+[
+    {
+      "id": "9E4GVLNG",
+      "type": "motion_picture",
+      "abstract": "Svelte is a JS library for building reactive UI components. But unlike React, Angular, and Vue, it does not ship a runtime like Virtual DOM to the browser ht...",
+      "dimensions": "2:12",
+      "source": "YouTube",
+      "title": "Svelte in 100 Seconds",
+      "URL": "https://www.youtube.com/watch?v=rv3Yq-B8qp4",
+      "author": [
+        {
+          "literal": "Fireship"
+        }
+      ],
+      "accessed": {
+        "date-parts": [
+          [
+            "2024",
+            11,
+            20
+          ]
+        ]
+      },
+      "issued": {
+        "date-parts": [
+          [
+            "2021",
+            4,
+            13
+          ]
+        ]
+      }
+    }
+  ]

@@ -1,0 +1,51 @@
+@prefix : <urn:example:> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#> .
+@prefix schema: <http://schema.org/> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+
+# Number of claims
+{
+   ( ?X { ?X a ?Claim . } ?L ) log:collectAllIn _:x .
+   ?L list:length ?N .
+}
+=>
+{
+   :result :numberOfClaims ?N .
+} .
+
+# Which predicates where found
+{
+    ?X a ?Claim .
+    ?X schema:about ?Y .
+    ?S ?P ?O ?Y .
+}
+=>
+{
+   :result :predicates ?P .
+} .
+
+# Statistics about the predicates
+{
+   :result :predicates ?P .
+   ( ?S { ?S ?P ?O ?Y } ?L ) log:collectAllIn _:x .
+   ?L list:length ?N .
+
+   :result :numberOfClaims ?Total .
+   ( ?N ?Total ) math:quotient ?Fraction .
+}
+=>
+{
+   :result :predicateNum (?P ?N ?Fraction) .
+} .
+
+# Which types of claims were created
+{
+   ?X a ?Claim .
+   ?X schema:about ?Y .
+   ?S a ?Type ?Y .
+}
+=>
+{
+   :claim a ?Type .
+} .

@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "download:rmlmapper": "node node_modules/@rmlio/rmlmapper-java-wrapper/lib/download-latest-rmlmapper.js",
-    "demo": "./bin/rdf_admin.js event2rdf --origin=import/event1-origin.json import/event1.json",
+    "demo-ttl": "./bin/rdf_admin.js event2rdf --origin=import/event1-origin.json import/event1.json",
+    "demo-jsonld": "./bin/rdf_admin.js event2rdf --format=application/ld+json --frame=config/claim.jsonld --origin=import/event1-origin.json import/event1.json",
     "database:init": "npx event_admin init",
     "database:import": "./bin/rdf_admin.js import",
     "database:import:overwrite": "./bin/rdf_admin.js import --overwrite",

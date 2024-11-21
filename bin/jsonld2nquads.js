@@ -24,17 +24,28 @@ async function main() {
     });
     lineReader.on("line", async (line) => {
         const quads = await parse(line);
-        await serialize(quads);
+        const text = await serialize(quads);
+
+        if (text) {
+            console.log(text);
+        }
     });
 }
 
 async function serialize(quads) {
-    const quadStream = streamifyArray(quads);
-    const textStream = rdfSerializer.serialize(quadStream, { contentType : 'application/n-quads'});
+    return new Promise( async (resolve) => {
+        const quadStream = streamifyArray(quads);
+        const textStream = rdfSerializer.serialize(quadStream, { contentType : 'application/n-quads'});
 
-    textStream.pipe(process.stdout)
-        .on('error', (error) => console.error(error))
-        .on('end', () => console.error('done'));
+        try {
+            const text = await stringifyStream(textStream);
+            resolve(text);
+        }
+        catch (e) {
+            console.error(e.message);
+            resolve(null);
+        }
+    });
 }
 
 async function parse(line) {
@@ -44,7 +55,10 @@ async function parse(line) {
 
         rdfParser.parse(textStream, { contentType: 'application/ld+json'})
             .on('data', (quad) => quads.push(quad))
-            .on('error', (error) => console.log(error))
+            .on('error', (error) => {
+                const json = JSON.parse(line);
+                console.error(`error: ${json.id} - ${error.message}`);
+            })
             .on('end', () => resolve(quads));
     });
 }

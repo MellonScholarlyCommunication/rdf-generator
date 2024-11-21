@@ -28,8 +28,13 @@
 # Statistics about the predicates
 {
    :claim :predicate ?P .
-   ( ?S { ?S ?P ?O ?Y } ?L ) log:collectAllIn _:x .
-   ?L list:length ?N .
+   ( ?X {
+	?X a schema:Claim .
+	?X schema:about ?Y .
+	?S ?P ?O ?Y
+   } ?L ) log:collectAllIn _:x .
+   ?L list:unique ?U .
+   ?U list:length ?N .
 
    :result :numberOfClaims ?Total .
    ( ?N ?Total ) math:quotient ?Fraction .
@@ -53,7 +58,11 @@
 # Statistics about the predicates
 {
    :claim :type ?O .
-   ( ?S { ?S ?P ?O ?Y } ?L ) log:collectAllIn _:x .
+   ( ?S {
+	?X a schema:Claim .
+	?X schema:about ?Y .
+	?S ?P ?O ?Y .
+   } ?L ) log:collectAllIn _:x .
    ?L list:length ?N .
 
    :result :numberOfClaims ?Total .

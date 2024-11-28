@@ -4,3 +4,4 @@ node_modules
 export/** 
 rmlmapper.jar
 tmp/**
+export/**

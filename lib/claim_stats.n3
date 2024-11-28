@@ -57,11 +57,11 @@
 
 # Statistics about the predicates
 {
-   :claim :type ?O .
+   :claim :type ?Type .
    ( ?S {
 	?X a schema:Claim .
 	?X schema:about ?Y .
-	?S ?P ?O ?Y .
+	?S ?P ?Type ?Y .
    } ?L ) log:collectAllIn _:x .
    ?L list:length ?N .
 
@@ -70,5 +70,27 @@
 }
 =>
 {
-   :result :typeNum (?O ?N ?Fraction) .
+   :result :typeNum (?Type ?N ?Fraction) .
+} .
+
+# Predicates per type
+{
+   :claim :type ?Type .
+   :claim :predicate ?Pred .
+   ( ?X  {
+	?X a schema:Claim .
+	?X schema:about ?Y .
+	?S ?P ?Type ?Y .
+   ?S2 ?Pred ?O2 ?Y .
+   } ?L ) log:collectAllIn _:x .
+
+   ?L list:unique ?U .
+   ?U list:length ?N .
+
+   :result :typeNum (?Type ?Total ?Whatever) .
+   ( ?N ?Total ) math:quotient ?Fraction .
+}
+=>
+{
+   :result :typePred (?Type ?Pred ?N ?Fraction) .
 } .

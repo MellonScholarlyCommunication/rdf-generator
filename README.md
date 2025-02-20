@@ -58,6 +58,62 @@ cp .env-example .env
     <https://schema.org/mainEntity> <https://scipost.org/submissions/scipost_202408_00008v1/>.
 ```
 
+## JSON-LD serialization
+
+```(json)
+{
+  "@context": "https://mycontributions.info/contexts/claim.jsonld",
+  "id": "urn:uuid:4e1e5edf-25b3-4bb9-9187-b76159e84d60",
+  "type": "Claim",
+  "schema:about": {
+    "id": "urn:uuid:afe62248-623d-4a2a-91b9-cd655869ff41"
+  },
+  "creator": {
+    "id": "https://mastodon.social/@patrickhochstenbach",
+    "type": "Person",
+    "name": "patrickhochstenbach"
+  },
+  "mainEntity": {
+    "id": "https://scipost.org/submissions/scipost_202408_00008v1/",
+    "type": "http://purl.org/net/xbiblio/csl#article-journal",
+    "abstract": "SciPost Submission Detail Adiabatic gauge potential and integrability breaking with free fermions",
+    "author": [
+      {
+        "id": "urn:uuid:07e72ccb-cd6a-45a5-a53f-e1faf6a0c7a5",
+        "type": "Person",
+        "familyName": "Pozsgay",
+        "givenName": "Balázs"
+      },
+      {
+        "id": "urn:uuid:580ddc20-cf19-43c8-91e0-6b01fbb6f148",
+        "type": "Person",
+        "familyName": "Vona",
+        "givenName": "István"
+      },
+      {
+        "id": "urn:uuid:add90282-bd29-421c-8381-aae58e10e611",
+        "type": "Person",
+        "familyName": "Tiutiakina",
+        "givenName": "Anastasiia"
+      },
+      {
+        "id": "urn:uuid:e420671d-de38-4dbe-b0e9-5a7198154390",
+        "type": "Person",
+        "familyName": "Sharipov",
+        "givenName": "Rustem"
+      }
+    ],
+    "datePublished": "2024",
+    "language": "en",
+    "title": "Adiabatic gauge potential and integrability breaking with free fermions"
+  },
+  "sdDatePublished": "2024-09-30T10:51:41.000Z",
+  "sdPublisher": {
+    "id": "https://mycontributions.info/service/m/profile/card#me"
+  }
+}
+```
+
 ## Create a claim database
 
 Create the database:

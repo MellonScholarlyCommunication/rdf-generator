@@ -63,53 +63,29 @@ cp .env-example .env
 ```(json)
 {
   "@context": "https://mycontributions.info/contexts/claim.jsonld",
-  "id": "urn:uuid:4e1e5edf-25b3-4bb9-9187-b76159e84d60",
+  "id": "urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313",
   "type": "Claim",
   "schema:about": {
-    "id": "urn:uuid:afe62248-623d-4a2a-91b9-cd655869ff41"
+    "id": "urn:uuid:c2006a89-8d73-47d6-a165-6c82e1939f35"
   },
   "creator": {
     "id": "https://mastodon.social/@patrickhochstenbach",
     "type": "Person",
+    "claimProfile": "https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171",
+    "verificationProfile": "https://mycontributions.info/profiles/9010.html",
     "name": "patrickhochstenbach"
   },
+  "isBasedOn": "https://mastodon.social/@patrickhochstenbach/114069052052314604",
   "mainEntity": {
-    "id": "https://scipost.org/submissions/scipost_202408_00008v1/",
-    "type": "http://purl.org/net/xbiblio/csl#article-journal",
-    "abstract": "SciPost Submission Detail Adiabatic gauge potential and integrability breaking with free fermions",
-    "author": [
-      {
-        "id": "urn:uuid:07e72ccb-cd6a-45a5-a53f-e1faf6a0c7a5",
-        "type": "Person",
-        "familyName": "Pozsgay",
-        "givenName": "Balázs"
-      },
-      {
-        "id": "urn:uuid:580ddc20-cf19-43c8-91e0-6b01fbb6f148",
-        "type": "Person",
-        "familyName": "Vona",
-        "givenName": "István"
-      },
-      {
-        "id": "urn:uuid:add90282-bd29-421c-8381-aae58e10e611",
-        "type": "Person",
-        "familyName": "Tiutiakina",
-        "givenName": "Anastasiia"
-      },
-      {
-        "id": "urn:uuid:e420671d-de38-4dbe-b0e9-5a7198154390",
-        "type": "Person",
-        "familyName": "Sharipov",
-        "givenName": "Rustem"
-      }
-    ],
-    "datePublished": "2024",
-    "language": "en",
-    "title": "Adiabatic gauge potential and integrability breaking with free fermions"
+    "id": "https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html",
+    "type": "http://purl.org/net/xbiblio/csl#webpage",
+    "title": "Reference Linking in a Hybrid Library Enivonment Part 2: SFX, a Generic Linking Solution"
   },
-  "sdDatePublished": "2024-09-30T10:51:41.000Z",
+  "sdDatePublished": "2025-02-26T07:40:07.328Z",
   "sdPublisher": {
-    "id": "https://mycontributions.info/service/m/profile/card#me"
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "type": "Service",
+    "name": "Mastodon Bot"
   }
 }
 ```

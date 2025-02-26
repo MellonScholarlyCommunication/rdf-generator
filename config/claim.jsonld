@@ -3,6 +3,7 @@
         "@version": 1.1,
         "@vocab": "https://schema.org/",
         "schema": "https://schema.org/",
+        "claim": "https://mycontributions.info/ns",
         "id": "@id",
         "type": "@type",
         "about": {
@@ -15,6 +16,14 @@
         },
         "mainEntity": {
           "@id": "schema:mainEntity",
+          "@type": "@id"
+        },
+        "claimProfile": {
+          "@id": "claim:claimProfile",
+          "@type": "@id"
+        },
+        "verificationProfile": {
+          "@id": "claim:verificationProfile",
           "@type": "@id"
         }
     },

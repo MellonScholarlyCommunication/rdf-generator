@@ -1,29 +1,34 @@
 {
-  "@context": "https://www.w3.org/ns/activitystreams",
-  "id": "urn:uuid:4e1e5edf-25b3-4bb9-9187-b76159e84d60",
-  "type": "Announce",
-  "published": "2024-09-30T10:51:41.000Z",
-  "actor": {
-    "id": "https://mastodon.social/@patrickhochstenbach",
-    "name": "patrickhochstenbach",
-    "inbox": "https://mastodon.social/users/patrickhochstenbach/inbox",
-    "type": "Person"
-  },
-  "origin": {
-    "id": "https://mycontributions.info/service/m/profile/card#me",
-    "name": "Mastodon Bot",
-    "inbox": "https://mycontributions.info/service/m/inbox/",
-    "type": "Service"
-  },
-  "object": {
-    "id": "https://mastodon.social/@patrickhochstenbach/113226121324046416",
-    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mas.to/@claimbot\" class=\"u-url mention\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">@<span>claimbot</span></a></span> <a href=\"https://scipost.org/submissions/scipost_202408_00008v1/\" rel=\"nofollow noopener noreferrer\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">scipost.org/submissions/scipos</span><span class=\"invisible\">t_202408_00008v1/</span></a></p>",
-    "url": [
-      {
-        "type": "Link",
-        "href": "https://scipost.org/submissions/scipost_202408_00008v1/"
-      }
-    ],
-    "type": "Note"
-  }
+   "@context" : "https://www.w3.org/ns/activitystreams",
+   "actor" : {
+      "id" : "https://mastodon.social/@patrickhochstenbach",
+      "inbox" : "https://mastodon.social/users/patrickhochstenbach/inbox",
+      "name" : "patrickhochstenbach",
+      "type" : "Person"
+   },
+   "generator" : {
+      "context" : "https://mastodon.social/@patrickhochstenbach/114069052052314604",
+      "id" : "https://www.npmjs.com/package/mastodon-cli",
+      "type" : "Application"
+   },
+   "id" : "urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313",
+   "object" : {
+      "content" : "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mas.to/@claimbot\" class=\"u-url mention\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">@<span>claimbot</span></a></span>  <a href=\"https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html\" rel=\"nofollow noopener noreferrer\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://www.</span><span class=\"ellipsis\">dlib.org/dlib/april99/van_de_s</span><span class=\"invisible\">ompel/04van_de_sompel-pt2.html</span></a></p>",
+      "id" : "https://mastodon.social/@patrickhochstenbach/114069052052314604",
+      "type" : "Note",
+      "url" : [
+         {
+            "href" : "https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html",
+            "type" : "Link"
+         }
+      ]
+   },
+   "origin" : {
+      "id" : "https://mycontributions.info/service/m/profile/card#me",
+      "inbox" : "https://mycontributions.info/service/m/inbox/",
+      "name" : "Mastodon Bot",
+      "type" : "Service"
+   },
+   "published" : "2025-02-26T07:40:07.328Z",
+   "type" : "Announce"
 }

@@ -89,7 +89,7 @@ program
 
         if (opts.origin) {
             const origin = await resolve(opts.origin, { name: all_opts.cache });
-            quads = annotateByOrigin(quads,origin);
+            quads = await annotateByOrigin(quads,origin);
         }
 
         console.log(await serializeQuads(quads, { format: opts.format , frame: frame }));

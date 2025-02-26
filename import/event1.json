@@ -1,30 +1,30 @@
 {
-  "@context": "https://www.w3.org/ns/activitystreams",
-  "id": "urn:uuid:29e7bd65-f550-4e3a-81fc-c1b5dcad19c2",
-  "type": "Announce",
-  "published": "2024-09-30T10:51:50.369Z",
-  "actor": {
-    "id": "https://mycontributions.info/service/x/profile/card#me",
-    "name": "Zotero Service Provider",
-    "inbox": "https://mycontributions.info/service/x/inbox/",
-    "type": "Service"
-  },
-  "origin": {
-    "id": "https://mycontributions.info/service/x/profile/card#me",
-    "name": "Zotero Service Provider",
-    "inbox": "https://mycontributions.info/service/x/inbox/",
-    "type": "Service"
-  },
-  "context": "https://scipost.org/submissions/scipost_202408_00008v1/",
-  "inReplyTo": "urn:uuid:fad28bde-697e-401b-9aee-c911f46409f7",
-  "object": {
-    "id": "https://mycontributions.info/service/x/result/2024/09/30/2d3913ab1409a73f861e1ff23f5447b5.json",
-    "type": "Document"
-  },
-  "target": {
-    "id": "https://mycontributions.info/service/m/profile/card#me",
-    "name": "Mastodon Bot",
-    "inbox": "https://mycontributions.info/service/m/inbox/",
-    "type": "Service"
-  }
+   "@context" : "https://www.w3.org/ns/activitystreams",
+   "actor" : {
+      "id" : "https://mycontributions.info/service/x/profile/card#me",
+      "inbox" : "https://mycontributions.info/service/x/inbox/",
+      "name" : "Zotero Service Provider",
+      "type" : "Service"
+   },
+   "context" : "https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html",
+   "id" : "urn:uuid:6413f3e5-bfd5-4ca7-bbd7-2d618e7394da",
+   "inReplyTo" : "urn:uuid:6d0c30a1-b255-4726-9d7a-24dfeadc11dc",
+   "object" : {
+      "id" : "https://mycontributions.info/service/x/result/2025/02/26/356d878e608d3dc3dafe739ee2a9edcc.json",
+      "type" : "Document"
+   },
+   "origin" : {
+      "id" : "https://mycontributions.info/service/x/profile/card#me",
+      "inbox" : "https://mycontributions.info/service/x/inbox/",
+      "name" : "Zotero Service Provider",
+      "type" : "Service"
+   },
+   "published" : "2025-02-26T07:40:15.706Z",
+   "target" : {
+      "id" : "https://mycontributions.info/service/m/profile/card#me",
+      "inbox" : "https://mycontributions.info/service/m/inbox/",
+      "name" : "Mastodon Bot",
+      "type" : "Service"
+   },
+   "type" : "Announce"
 }

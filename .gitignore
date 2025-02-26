@@ -5,3 +5,4 @@ export/**
 rmlmapper.jar
 tmp/**
 export/**
+package-lock.json

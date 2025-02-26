@@ -24,9 +24,9 @@
       ]
    },
    "origin" : {
-      "id" : "https://mycontributions.info/service/m/profile/card#me",
-      "inbox" : "https://mycontributions.info/service/m/inbox/",
-      "name" : "Mastodon Bot",
+      "id" : "https://claimbot.surf.nl/profile/card#me",
+      "inbox" : "https://claimbot.surf.nl/inbox/",
+      "name" : "SURF Claim Bot",
       "type" : "Service"
    },
    "published" : "2025-02-26T07:40:07.328Z",

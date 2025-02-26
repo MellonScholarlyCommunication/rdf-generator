@@ -18,6 +18,21 @@ npm link eventlog-server
 cp .env-example .env
 ```
 
+## RDF Model
+
+![Alt text](./claim_summary.svg)
+
+The RDF model of a claim is based on two parts:
+
+- A *provenance* section that makes factual statements about who created the claim, at what time, and which system was used to process the claim
+- A *metadata* section that provides the generated metadata for the claim
+
+The **Creator** of a claim is the researcher on a social platform.
+
+The **Publisher** of a claim is the service that generated the RDF model.
+
+The **Artifact** is the generated metadata for the IRI in the claim.
+
 ## Demo
 
 ```
@@ -45,10 +60,10 @@ cp .env-example .env
       <https://mycontributions.info/profiles/9010.html>.
 <urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> 
     <https://schema.org/sdPublisher> 
-      <https://mycontributions.info/service/m/profile/card#me>.
-<https://mycontributions.info/service/m/profile/card#me> 
+      <https://claimbot.surf.nl/profile/card#me>.
+<https://claimbot.surf.nl/profile/card#me> 
     a <https://schema.org/Service>;
-    <https://schema.org/name> "Mastodon Bot".
+    <https://schema.org/name> "SURF Claim Bot".
 <urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> 
     <https://schema.org/sdDatePublished> 
       "2025-02-26T07:40:07.328Z";
@@ -83,9 +98,9 @@ cp .env-example .env
   },
   "sdDatePublished": "2025-02-26T07:40:07.328Z",
   "sdPublisher": {
-    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "id": "https://claimbot.surf.nl/profile/card#me",
     "type": "Service",
-    "name": "Mastodon Bot"
+    "name": "SURF Claim Bot"
   }
 }
 ```

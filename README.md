@@ -104,7 +104,7 @@ The **Artifact** is the generated metadata for the IRI in the claim.
 }
 ```
 
-## Create a claim database
+## Create a claims database
 
 Create the database:
 
@@ -112,7 +112,7 @@ Create the database:
 yarn -s database:init
 ```
 
-Import data from the cache database:
+Import data from the 'cache' database into the 'claims' database:
 
 ```
 yarn database:import

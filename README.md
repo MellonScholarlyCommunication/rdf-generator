@@ -175,17 +175,17 @@ The JSON-LD frame for the claims can be found in `./config/claim.jsonld` and is 
 Build a version of a docker image:
 
 ```
-docker build . -t hochstenbach/rdf-generator:v0.0.1
+docker build . -t hochstenbach/rdf-generator:v0.0.2
 ```
 
 Run a docker image:
 
 ```
-docker run --rm hochstenbach/rdf-generator:v0.0.1
+docker container run --env-file .env -p 3006:3006 --rm hochstenbach/rdf-generator:v0.0.2
 ```
 
 Push it to DockerHub:
 
 ```
-docker push hochstenbach/rdf-generator:v0.0.1
+docker push hochstenbach/rdf-generator:v0.0.2
 ```

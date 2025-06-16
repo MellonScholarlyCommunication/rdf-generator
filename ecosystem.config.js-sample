@@ -1,0 +1,8 @@
+module.exports = {
+  apps : [
+   {
+    name   : "claim-server",
+    script : "LOG4JS=info npx ldn-inbox-server start-server --port 3006"
+   }
+  ]
+}

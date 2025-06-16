@@ -12,4 +12,12 @@ RUN npm install
 
 COPY . .
 
-CMD scripts/update.sh
+RUN npm install -g pm2
+
+COPY .env-docker ./.env
+
+COPY ecosystem.config.js-sample ./ecosystem.config.js
+
+EXPOSE 3006
+
+CMD [ "pm2-runtime" , "start", "ecosystem.config.js" ]

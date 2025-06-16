@@ -146,6 +146,16 @@ Make the claims database available as a JSONL and NQuads dump at http://localhos
 ./export.sh
 ```
 
+## Start a server to provide a trace of a Mastodon claim
+
+```
+yarn server
+```
+
+Visit: http://localhost:8001/trace?artifact=<mastodon_profile_url> to see a trace
+
+E.g. http://localhost:8001/trace?artifact=https://research.test.edu.nl/@alsvanounds
+
 ## Config
 
 The [RML](https://rml.io) mapping file used for CSL to RDF mapping can be found in `./config/mapping.ttl`.
@@ -158,6 +168,7 @@ The JSON-LD frame for the claims can be found in `./config/claim.jsonld` and is 
 - `RMLMAP` : the RML map to used to generate RDF from CSL
 - `TEMPDIR` : a temporary process directory
 - `CONTEXT_URL` : the URL of the published JSON-LD frame for claims
+- `CLAIMLOG_BASEURL` : the base URL of the claim log inbox and trace service
 
 ## Docker
 

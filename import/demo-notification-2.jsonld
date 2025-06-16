@@ -1,0 +1,22 @@
+{
+   "@context" : "https://www.w3.org/ns/activitystreams",
+   "type" : "Announce",
+   "id" : "urn:uuid:edc0a861-20f5-48fb-bc42-9b7e49d4ad08",
+   "actor" : {
+      "id": "https://mycontributions.info/service/m/profile/card#me",
+      "name": "Mastodon Bot",
+      "inbox": "https://mycontributions.info/service/m/inbox/",
+      "type": "Service"
+   },
+   "object" : {
+      "id" : "https://mycontributions.info/service/e/trace?artifact=https://research.test.edu.nl/@alsvanounds/114539519358857906",
+      "type" : "Document"
+   },
+   "origin" : {
+      "id": "https://mycontributions.info/service/m/profile/card#me",
+      "name": "Mastodon Bot",
+      "inbox": "https://mycontributions.info/service/m/inbox/",
+      "type": "Service"
+   },
+   "published" : "2025-06-16T11:26:15.706Z"
+}

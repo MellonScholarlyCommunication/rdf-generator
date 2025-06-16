@@ -14,7 +14,11 @@
     "database:import:overwrite": "./bin/rdf_admin.js import --overwrite",
     "database:export": "npx event_admin export --intention rdf",
     "cache-admin": "npx event_admin",
-    "real-clean": "npx event_admin remove-all"
+    "clean": "rm error/*",
+    "real-clean": "npx event_admin remove-all",
+    "server": "npx ldn-inbox-server start-server",
+    "demo-notification": "cp import/demo-notification* ./inbox",
+    "handle-inbox": "npx ldn-inbox-server handler @inbox -hn @handler/notification_handler/multi.js"
   },
   "dependencies": {
     "@rmlio/rmlmapper-java-wrapper": "^2.1.2",
@@ -22,6 +26,7 @@
     "dotenv": "^16.4.5",
     "eventlog-server": "git+https://github.com/MellonScholarlyCommunication/eventlog-server.git",
     "jsonld": "^8.3.2",
+    "ldn-inbox-server": "^1.8.3",
     "memoizee": "^0.4.17",
     "n3": "^1.22.3",
     "node-fetch": "2.7.0",

@@ -1,0 +1,8 @@
+{
+    "registry" :[
+        { 
+            "path": "trace[\/]?.*" , 
+            "do": "./handler/tracelog.js" 
+        }
+    ]
+}

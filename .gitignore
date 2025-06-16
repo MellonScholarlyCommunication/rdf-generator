@@ -6,3 +6,6 @@ rmlmapper.jar
 tmp/**
 export/**
 package-lock.json
+inbox/**
+outbox/**
+error/**

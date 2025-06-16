@@ -1,0 +1,22 @@
+{
+    "notification_handler": {
+        "multi": {
+            "handlers": [
+                [
+                 // Accept only Announces from claimbot server
+                 { 
+                    "id": "@handler/notification_handler/jsonpath_filter.js",
+                    "anyOf": [ 
+                        [ 
+                            { "path": "$.type" , "value": "Announce" } ,
+                            { "path": "$.origin.id" , "value": "https://mycontributions.info/service/m/profile/card#me" }
+                        ]
+                    ]
+                 },
+                 // Update the wikijs
+                 "./handler/import_event.js",
+                ]
+            ]
+        }
+    }
+}

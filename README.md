@@ -146,7 +146,7 @@ Make the claims database available as a JSONL and NQuads dump at http://localhos
 ./export.sh
 ```
 
-## Start a server to provide a trace of a Mastodon claim
+## Start a server to provide a trace of all claims by a Mastodon profile
 
 ```
 yarn server

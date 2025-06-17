@@ -81,6 +81,10 @@ function createCitation(data) {
         citation.push(publisher);
     }
 
+    if (about['dateRead']) {
+        citation.push(`Accessed ${about['dateRead']}`);
+    }
+
     citation.push(`<a href="${about['id']}">[Full Text]</a>`);
 
     return citation.join(". ");

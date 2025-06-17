@@ -43,13 +43,19 @@
       event.preventDefault(); 
       const artifactValue = $('input[name="artifact"]').val();
       const claims = await fetchClaims(artifactValue);
+      const thisClaimUrl = claimUrl(artifactValue);
       if (claims) {
+         $('#claims').append('<h3>Claims</h3>');
          for (let i = 0 ; i < claims.length ; i++) {
             $('#claims').append(
                 "<div class=\"claim-item\">" + 
                 createCitation(claims[i]) +
                 "</div>");
          }
+         $('#claims').append(
+            '<h3>RDF</h3>' +
+            `<div><a href="${thisClaimUrl}">${thisClaimUrl}</a></div>`
+         );
       }
       return false;
     });

@@ -1,8 +1,11 @@
-const CLAIM_BASE= 'https://mycontributions.info/service/c/trace?artifact=';
+const CLAIM_BASE = 'https://mycontributions.info/service/c';
+
+function claimUrl(url) {
+    return CLAIM_BASE + '/trace?artifact=' + url;
+}
 
 async function fetchClaims(url) {
-    const claimUrl = CLAIM_BASE + url;
-    const claimList = await fetchJSON(claimUrl);
+    const claimList = await fetchJSON(claimUrl(url));
 
     if (! claimList) {
         return null;
@@ -43,11 +46,11 @@ function createCitation(data) {
             citation.push(authors.join(", "));
         }
         else if (isObject(about['author'])) {
-            if (auth['familyName'] && auth['givenName']) {
-                citation.push(`${auth['familyName']}, ${auth['givenName'].substr(0,1)}.`);
+            if (about['author']['familyName'] && about['author']['givenName']) {
+                citation.push(`${about['author']['familyName']}, ${about['author']['givenName'].substr(0,1)}.`);
             }
-            else if (auth['familyName']) {
-                citation.push(`${auth['familyName']}`); 
+            else if (about['author']['familyName']) {
+                citation.push(`${about['author']['familyName']}`); 
             } 
         }
 
@@ -115,4 +118,13 @@ function aboutSection(data) {
     }
     const firstKey = Object.keys(data.about)[0];
     return data.about[firstKey];
+}
+
+async function makeHTMLTemplate(url) {
+    const response = await fetch(CLAIM_BASE + '/demo.html');
+
+    if (response.ok) {
+        const text = await response.text();
+        return text;
+    }
 }

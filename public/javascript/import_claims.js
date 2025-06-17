@@ -70,9 +70,20 @@ function createCitation(data) {
         citation.push(`(${about['datePublished']})`);
     }
 
+    if (about['publisher']) {
+        citation.push(about['publisher']);
+    }
+    else {
+        const publisher = about['id']
+                            .replaceAll(/^https?:\/\//g,'')
+                            .replaceAll(/\/.*/g,'')
+                            .toUpperCase();
+        citation.push(publisher);
+    }
+
     citation.push(`<a href="${about['id']}">[Full Text]</a>`);
 
-    return citation.join(" ");
+    return citation.join(". ");
 }
 
 function isObject (value) {  

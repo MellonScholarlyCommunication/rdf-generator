@@ -33,6 +33,13 @@
   ];
 
   rr:predicateObjectMap [ 
+    rr:predicate schema:dateRead; 
+    rr:objectMap [
+      rml:reference "accessed"
+    ]
+  ];
+
+  rr:predicateObjectMap [ 
     rr:predicate schema:abstract; 
     rr:objectMap [
       rml:reference "abstract"

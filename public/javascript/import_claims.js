@@ -37,7 +37,7 @@ function createCitation(data) {
             const authors = [];
             about['author'].forEach( auth => {
                 if (auth['familyName'] && auth['givenName']) {
-                    authors.push(`${auth['familyName']}, ${auth['givenName'].substr(0,1)}.`);
+                    authors.push(`${auth['familyName']}, ${auth['givenName'].substr(0,1)}`);
                 }
                 else if (auth['familyName']) {
                     authors.push(`${auth['familyName']}`); 
@@ -47,7 +47,7 @@ function createCitation(data) {
         }
         else if (isObject(about['author'])) {
             if (about['author']['familyName'] && about['author']['givenName']) {
-                citation.push(`${about['author']['familyName']}, ${about['author']['givenName'].substr(0,1)}.`);
+                citation.push(`${about['author']['familyName']}, ${about['author']['givenName'].substr(0,1)}`);
             }
             else if (about['author']['familyName']) {
                 citation.push(`${about['author']['familyName']}`); 

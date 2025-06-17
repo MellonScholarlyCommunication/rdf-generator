@@ -52,6 +52,7 @@
       const artifactValue = $('input[name="artifact"]').val();
       const claims = await fetchClaims(artifactValue);
       const thisClaimUrl = claimUrl(artifactValue);
+      $('#claims').html('');
       if (claims) {
          $('#claims').append('<h3>Claims</h3>');
          for (let i = 0 ; i < claims.length ; i++) {

@@ -14,6 +14,9 @@
                 font-family: Monospace;  
                 font-size: 12px;   
             }
+            #include {
+                margin-top: 15px;
+            }
         </style>
         <title>Claim Service Node</title>
     </head>
@@ -37,9 +40,7 @@
 
             <div id="claims"></div>
 
-            <h3>HTML Include</h3>
-            <p>Insert this code in your own web page to generate a claims list.</p>
-            <textarea id="template" rows="10"></textarea>
+            <div id="include"></div>
 
             <h2>Source Code</h2>
 
@@ -53,6 +54,7 @@
       const claims = await fetchClaims(artifactValue);
       const thisClaimUrl = claimUrl(artifactValue);
       $('#claims').html('');
+      $('#include').html('');
       if (claims) {
          $('#claims').append('<h3>Claims</h3>');
          for (let i = 0 ; i < claims.length ; i++) {
@@ -62,15 +64,23 @@
                 "</div>");
          }
          $('#claims').append(
-            '<h3>Claim Log (JSON-LD)</h3>' +
+            '<h3 style="margin-top: 15px">Claim Log (JSON-LD)</h3>' +
             `<div><a href="${thisClaimUrl}">${thisClaimUrl}</a></div>`
          );
-      }
 
-      const template = await makeHTMLTemplate(thisClaimUrl);
+        const template = await makeHTMLTemplate(thisClaimUrl);
       
-      if (template) {
-        $("#template").text(template);
+        if (template) {
+            $("#include").html(`
+            <h3>HTML Include</h3>
+            <p>Insert this code in your own web page to generate a claims list.</p>
+            <textarea id="template" rows="10"></textarea>
+            `);
+            $("#template").text(template);
+        }
+      }
+      else {
+        $('#claims').append(`<i>${artifactValue} does not have claims yet</i>`);
       }
 
       return false;

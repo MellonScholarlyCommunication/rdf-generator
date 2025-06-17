@@ -48,6 +48,13 @@
   ];
 
   rr:predicateObjectMap [ 
+    rr:predicate schema:publisher; 
+    rr:objectMap [
+      rml:reference "container-title"
+    ]
+  ];
+
+  rr:predicateObjectMap [ 
     rr:predicate schema:citation; 
     rr:objectMap [
       rml:reference "references"

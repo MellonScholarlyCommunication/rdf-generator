@@ -4,15 +4,56 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
         />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="javascript/import_claims.js"></script>
+        <style type="text/css">
+            .claim-item {
+                margin-bottom: 8px;
+            }
+        </style>
         <title>Claim Service Node</title>
     </head>
     <body>
         <main class="container">
             <h1>Claim Service Node</h1>
 
+            <form id="myForm">
+                <fieldset>
+                    <label>
+                    Mastodon profile
+                    <input
+                        name="artifact"
+                        value="https://research.test.edu.nl/@alsvanounds"
+                        placeholder="Profile"
+                    />
+                    </label>
+                </fieldset>
+                <input type="submit"/>
+            </form>
+
+            <div id="claims"></div>
+
             <h2>Source Code</h2>
 
             <a href="https://github.com/MellonScholarlyCommunication/rdf-generator">https://github.com/MellonScholarlyCommunication/rdf-generator</a>
         </main>
+        <script>
+ $(document).ready(function() {
+    $("#myForm").on("submit", async function(event) {
+      event.preventDefault(); 
+      const artifactValue = $('input[name="artifact"]').val();
+      const claims = await fetchClaims(artifactValue);
+      if (claims) {
+         for (let i = 0 ; i < claims.length ; i++) {
+            $('#claims').append(
+                "<div class=\"claim-item\">" + 
+                createCitation(claims[i]) +
+                "</div>");
+         }
+      }
+      return false;
+    });
+  });
+        </script>
     </body>
 </html>

@@ -62,10 +62,6 @@ function createCitation(data) {
     }
 
     if (about['title']) {
-        if (citation.length) {
-            citation.push(". ");
-        }
-
         citation.push(`<i>${about['title']}</i>`);
     }
 
@@ -90,7 +86,7 @@ function createCitation(data) {
 
     citation.push(`<a href="${about['id']}">[Full Text]</a>`);
 
-    return citation.join(". ");
+    return citation.filter(n=>n.match(/\S/)).join(". ");
 }
 
 function isObject (value) {  

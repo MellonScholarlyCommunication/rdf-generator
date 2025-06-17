@@ -121,10 +121,17 @@ function aboutSection(data) {
 }
 
 async function makeHTMLTemplate(url) {
+    if (!url) {
+        return null;
+    }
+
     const response = await fetch(CLAIM_BASE + '/demo.html');
 
     if (response.ok) {
         const text = await response.text();
-        return text;
+        return text.replaceAll('DEMO_ARTIFACT',url);
+    }
+    else {
+        return null;
     }
 }

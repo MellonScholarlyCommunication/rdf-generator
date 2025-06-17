@@ -1,3 +1,4 @@
 {
-    "Content-Type": "text/html"
+    "Content-Type": "text/html",
+    "Access-Control-Allow-Origin": "*"
 }

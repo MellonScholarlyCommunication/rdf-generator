@@ -68,7 +68,7 @@
             `<div><a href="${thisClaimUrl}">${thisClaimUrl}</a></div>`
          );
 
-        const template = await makeHTMLTemplate(thisClaimUrl);
+        const template = await makeHTMLTemplate(artifactValue);
       
         if (template) {
             $("#include").html(`

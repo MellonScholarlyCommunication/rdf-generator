@@ -1,8 +1,7 @@
 # RDF Generator
 
-A script to generate RDF data from [CSL](https://docs.citationstyles.org/en/stable/specification.html#csl-1-0-2-specification) (Citation Style Language) data or [Event Notifications](https://www.eventnotifications.net) that point to CSL data. 
+Tooling to generate Claim RDF from [CSL](https://docs.citationstyles.org/en/stable/specification.html#csl-1-0-2-specification) (Citation Style Language) data.
 
-For the mapping we use RDF Mapping Language from [RML.io](https://rml.io).
 
 ## Install
 
@@ -32,45 +31,8 @@ The **Publisher** of a claim is the service that generated the RDF model.
 
 The **Artifact** is the generated metadata for the IRI in the claim.
 
-## Demo
-
-```
-./bin/rdf_admin.js csl2rdf import/citation1.json
-<https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/net/xbiblio/csl#webpage> .
-<https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> <https://schema.org/title> "Reference Linking in a Hybrid Library Enivronment Part 2: SFX, a Generic Linking Solution" .
-```
-
-```
-./bin/rdf_admin.js event2rdf --origin=import/event1-origin.json import/event1.json
-<urn:uuid:c2006a89-8d73-47d6-a165-6c82e1939f35> {
-<https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> a <http://purl.org/net/xbiblio/csl#webpage>;
-    <https://schema.org/title> "Reference Linking in a Hybrid Library Enivonment Part 2: SFX, a Generic Linking Solution"
-}
-<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> a <https://schema.org/Claim>;
-    <https://schema.org/about> <urn:uuid:c2006a89-8d73-47d6-a165-6c82e1939f35>;
-    <https://schema.org/creator> 
-      <https://mastodon.social/@patrickhochstenbach>.
-<https://mastodon.social/@patrickhochstenbach> 
-    a <https://schema.org/Person>;
-    <https://schema.org/name> "patrickhochstenbach";
-    <https://mycontributions.info/ns#claimProfile> 
-      <https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171>;
-    <https://mycontributions.info/ns#verificationProfile> 
-      <https://mycontributions.info/profiles/9010.html>.
-<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> 
-    <https://schema.org/sdPublisher> 
-      <https://claimbot.surf.nl/profile/card#me>.
-<https://claimbot.surf.nl/profile/card#me> 
-    a <https://schema.org/Service>;
-    <https://schema.org/name> "SURF Claim Bot".
-<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> 
-    <https://schema.org/sdDatePublished> 
-      "2025-02-26T07:40:07.328Z";
-    <https://schema.org/isBasedOn> 
-      <https://mastodon.social/@patrickhochstenbach/114069052052314604>;
-    <https://schema.org/mainEntity> 
-      <https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html>.
-```
+For the mapping we use RDF Mapping Language from [RML.io](https://rml.io). See
+`config/mapping.ttl` for the mapping file.
 
 ## JSON-LD serialization
 
@@ -104,57 +66,102 @@ The **Artifact** is the generated metadata for the IRI in the claim.
 }
 ```
 
+## Demo
+
+```
+./bin/rdf_admin.js csl2rdf dev/citation1.json
+<https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/net/xbiblio/csl#webpage> .
+<https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> <https://schema.org/title> "Reference Linking in a Hybrid Library Enivronment Part 2: SFX, a Generic Linking Solution" .
+```
+
+```
+./bin/rdf_admin.js event2rdf --origin=dev/event1-origin.json dev/event1.json
+<urn:uuid:c2006a89-8d73-47d6-a165-6c82e1939f35> {
+<https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> a <http://purl.org/net/xbiblio/csl#webpage>;
+    <https://schema.org/title> "Reference Linking in a Hybrid Library Enivonment Part 2: SFX, a Generic Linking Solution"
+}
+<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> a <https://schema.org/Claim>;
+    <https://schema.org/about> <urn:uuid:c2006a89-8d73-47d6-a165-6c82e1939f35>;
+    <https://schema.org/creator> 
+      <https://mastodon.social/@patrickhochstenbach>.
+<https://mastodon.social/@patrickhochstenbach> 
+    a <https://schema.org/Person>;
+    <https://schema.org/name> "patrickhochstenbach";
+    <https://mycontributions.info/ns#claimProfile> 
+      <https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171>;
+    <https://mycontributions.info/ns#verificationProfile> 
+      <https://mycontributions.info/profiles/9010.html>.
+<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> 
+    <https://schema.org/sdPublisher> 
+      <https://claimbot.surf.nl/profile/card#me>.
+<https://claimbot.surf.nl/profile/card#me> 
+    a <https://schema.org/Service>;
+    <https://schema.org/name> "SURF Claim Bot".
+<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> 
+    <https://schema.org/sdDatePublished> 
+      "2025-02-26T07:40:07.328Z";
+    <https://schema.org/isBasedOn> 
+      <https://mastodon.social/@patrickhochstenbach/114069052052314604>;
+    <https://schema.org/mainEntity> 
+      <https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html>.
+```
+
+
 ## Create a claims database
 
 Create the database:
 
 ```
-yarn -s database:init
+npx event_admin init --name claims
 ```
 
-Import data from the 'cache' database into the 'claims' database:
+Import data from a local 'cache' database (see eventlog-server) into the 'claims' database:
 
 ```
-yarn database:import
+./bin/rdf_admin.js import
 ```
+
+By default, existing RDF data will not be overwritten. Use the `--overwrite` option to overwrite old data/
 
 Export all claims as JSONLD
 
 ```
-yarn database:export
+npx event_admin export --intention rdf
 ```
 
-## Remove all data 
+Export all claims as NQuads:
 
 ```
-yarn real-clean
+npx event_admin export --intention rdf | ./bin/jsonls2nquads.js /dev/stdin
 ```
 
-## Generate demonstration data
-
-The `make_generated.sh` creates Turtle from CSL files `import/citation*.json` and JSON-LD from `import/event*.json` files. The output is stored in `import/generated`.
+Remove all the data from the claims database:
 
 ```
-./make_generated.sh
+npx event_admin remove-all --name claims
 ```
 
-## Export the claims database to a public web address
-
-Make the claims database available as a JSONL and NQuads dump at http://localhost/exports/.
-
-```
-./export.sh
-```
-
-## Start a server to provide a trace of all claims by a Mastodon profile
+## Start HTTP Interface
 
 ```
 yarn server
 ```
 
-Visit: http://localhost:8001/trace?artifact=<mastodon_profile_url> to see a trace
+Visit: http://localhost:3006/
 
-E.g. http://localhost:8001/trace?artifact=https://research.test.edu.nl/@alsvanounds
+## LDN Inbox support
+
+Start the LDN inbox handler
+
+```
+yarn handle-inbox
+```
+
+Post an Event trace to the inbox to generate a new Claim RDF:
+
+```
+curl -X POST -H 'Content-Type: application/ld+json' --data-binary '@import/demo-notification-1.jsonld' http://localhost:3006/inbox/
+```
 
 ## Config
 

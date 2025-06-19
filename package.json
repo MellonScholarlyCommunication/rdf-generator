@@ -16,8 +16,9 @@
     "cache-admin": "npx event_admin",
     "clean": "rm error/*",
     "real-clean": "npx event_admin remove-all",
-    "server": "npx ldn-inbox-server start-server",
+    "server": "npx ldn-inbox-server start-server --port 3006",
     "demo-notification": "cp import/demo-notification* ./inbox",
+    "demo-post": "curl -X POST -H 'Content-Type: application/ld+json' --data-binary '@import/demo-notification-1.jsonld' http://localhost:3006/inbox/",
     "handle-inbox": "npx ldn-inbox-server handler @inbox -hn @handler/notification_handler/multi.js"
   },
   "dependencies": {

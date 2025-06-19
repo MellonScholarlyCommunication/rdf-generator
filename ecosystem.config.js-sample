@@ -3,6 +3,10 @@ module.exports = {
    {
     name   : "claim-server",
     script : "LOG4JS=info npx ldn-inbox-server start-server --port 3006"
-   }
+   },
+   {
+    name   : "claim-inbox",
+    script : "LOG4JS=info npx ldn-inbox-server handler @inbox -hn @handler/notification_handler/multi.js --loop" ,
+   },
   ]
 }

@@ -1,0 +1,52 @@
+<https://doi.org/10.1007/978-3-031-72407-7_15> <http://purl.org/dc/terms/source> "Springer Link" .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <http://purl.org/ontology/bibo/pages> "200-216" .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/net/xbiblio/csl#paper-conference> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/abstract> "Inspired by the idea of RDF Redux, an RDF extension suggested by Pat Hayes, RDF Surfaces were recently developed and further specified by a W3C community group. The idea of RDF Surfaces is to add negation and explicit existential quantification to RDF and thereby gain the expressivity of first-order logic. RDF Surfaces come with a syntax and even with first implementations, but the semantics has so far only been defined informally. In this paper we aim to close this gap: we map RDF Surface graphs to first-order logic formulae and thereby define their semantics. We show that, restricted to RDF graphs, this semantics preserves simple entailment. That is, each RDF graph which entails another in its first-order translation, also entails this graph according to RDF’s simple entailment and vice versa. To test whether this semantics fully meets the informal specification, we furthermore provide rs2fol, an implementation which follows our mapping and translates RDF Surfaces in N3-based syntax to first-order logic in TPTP syntax. We apply this implementation on the various examples collected on the Web page of the RDF Surfaces reasoner EYE, run them with the theorem prover Vampire and compare the results with those of EYE. With the exception of a different understanding of lists – EYE treats these as first-class citizens – results of both approaches coincide. We thus provides a tool for entailment checking which is conform to the current specification. This tool will help future developers of RDF Surfaces reasoners to test their derivations for correctness and the community as a whole to better understand the logic and – if needed – to refine or even restrict it." .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/author> <urn:uuid:267d94eb-e857-43e2-96cd-17d964f85a2c> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/author> <urn:uuid:6d978695-73f3-455d-8708-cfe9096b8f94> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/author> <urn:uuid:8dccab12-751e-4aa9-a16c-2462011f7b93> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/author> <urn:uuid:af8cbfb9-23e9-419e-9f7e-86fda53bae3f> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/author> <urn:uuid:d0f5b38c-9fa9-4ba9-bf16-2f72ef96bf82> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/author> <urn:uuid:e114f82d-708d-4026-87e6-621fff5add8f> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/datePublished> "2024" .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/editor> <urn:uuid:3ff4c19d-d852-4aa7-aa81-29cf99627bf0> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/editor> <urn:uuid:6a4c6114-714d-448c-a66e-a9795318ccb0> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/editor> <urn:uuid:adf6ae66-afa9-4873-b3e1-cf5f7ae8a7a6> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/editor> <urn:uuid:cace1b43-c010-46ba-aeef-c6a5e34e5d5c> .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/isbn> "9783031724077" .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/language> "en" .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/location> "Cham" .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/publisher> "Rules and Reasoning" .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/publisher> "Springer Nature Switzerland" .
+<https://doi.org/10.1007/978-3-031-72407-7_15> <https://schema.org/title> "RDF Surfaces as a First-Order Language for the Semantic Web" .
+<urn:uuid:267d94eb-e857-43e2-96cd-17d964f85a2c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:267d94eb-e857-43e2-96cd-17d964f85a2c> <https://schema.org/familyName> "Noort" .
+<urn:uuid:267d94eb-e857-43e2-96cd-17d964f85a2c> <https://schema.org/givenName> "Mathijs" .
+<urn:uuid:3ff4c19d-d852-4aa7-aa81-29cf99627bf0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:3ff4c19d-d852-4aa7-aa81-29cf99627bf0> <https://schema.org/familyName> "Roman" .
+<urn:uuid:3ff4c19d-d852-4aa7-aa81-29cf99627bf0> <https://schema.org/givenName> "Dumitru" .
+<urn:uuid:6a4c6114-714d-448c-a66e-a9795318ccb0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:6a4c6114-714d-448c-a66e-a9795318ccb0> <https://schema.org/familyName> "Soylu" .
+<urn:uuid:6a4c6114-714d-448c-a66e-a9795318ccb0> <https://schema.org/givenName> "Ahmet" .
+<urn:uuid:6d978695-73f3-455d-8708-cfe9096b8f94> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:6d978695-73f3-455d-8708-cfe9096b8f94> <https://schema.org/familyName> "Martens" .
+<urn:uuid:6d978695-73f3-455d-8708-cfe9096b8f94> <https://schema.org/givenName> "Rebekka" .
+<urn:uuid:8dccab12-751e-4aa9-a16c-2462011f7b93> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:8dccab12-751e-4aa9-a16c-2462011f7b93> <https://schema.org/familyName> "Hochstenbach" .
+<urn:uuid:8dccab12-751e-4aa9-a16c-2462011f7b93> <https://schema.org/givenName> "Patrick" .
+<urn:uuid:adf6ae66-afa9-4873-b3e1-cf5f7ae8a7a6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:adf6ae66-afa9-4873-b3e1-cf5f7ae8a7a6> <https://schema.org/familyName> "Šimkus" .
+<urn:uuid:adf6ae66-afa9-4873-b3e1-cf5f7ae8a7a6> <https://schema.org/givenName> "Mantas" .
+<urn:uuid:af8cbfb9-23e9-419e-9f7e-86fda53bae3f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:af8cbfb9-23e9-419e-9f7e-86fda53bae3f> <https://schema.org/familyName> "De Roo" .
+<urn:uuid:af8cbfb9-23e9-419e-9f7e-86fda53bae3f> <https://schema.org/givenName> "Jos" .
+<urn:uuid:cace1b43-c010-46ba-aeef-c6a5e34e5d5c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:cace1b43-c010-46ba-aeef-c6a5e34e5d5c> <https://schema.org/familyName> "Kirrane" .
+<urn:uuid:cace1b43-c010-46ba-aeef-c6a5e34e5d5c> <https://schema.org/givenName> "Sabrina" .
+<urn:uuid:d0f5b38c-9fa9-4ba9-bf16-2f72ef96bf82> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:d0f5b38c-9fa9-4ba9-bf16-2f72ef96bf82> <https://schema.org/familyName> "Arndt" .
+<urn:uuid:d0f5b38c-9fa9-4ba9-bf16-2f72ef96bf82> <https://schema.org/givenName> "Dörthe" .
+<urn:uuid:e114f82d-708d-4026-87e6-621fff5add8f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:e114f82d-708d-4026-87e6-621fff5add8f> <https://schema.org/familyName> "Ongenae" .
+<urn:uuid:e114f82d-708d-4026-87e6-621fff5add8f> <https://schema.org/givenName> "Femke" .
+

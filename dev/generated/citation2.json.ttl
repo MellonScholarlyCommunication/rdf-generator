@@ -1,0 +1,24 @@
+<https://scipost.org/submissions/scipost_202408_00008v1/> <http://purl.org/dc/terms/source> "scipost.org" .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/net/xbiblio/csl#article-journal> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/abstract> "SciPost Submission Detail Adiabatic gauge potential and integrability breaking with free fermions" .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/author> <urn:uuid:2a14f37a-8b1d-4233-a266-aa12df4a9fbe> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/author> <urn:uuid:371a78c7-030c-4329-932f-4357d76ebf1c> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/author> <urn:uuid:abc6e461-db2f-499b-8213-d5aa201e7c65> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/author> <urn:uuid:b76ba5be-e103-4bf8-891e-90fb3adbe63b> .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/datePublished> "2024" .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/dateRead> "2024-9-30" .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/language> "en" .
+<https://scipost.org/submissions/scipost_202408_00008v1/> <https://schema.org/title> "Adiabatic gauge potential and integrability breaking with free fermions" .
+<urn:uuid:2a14f37a-8b1d-4233-a266-aa12df4a9fbe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:2a14f37a-8b1d-4233-a266-aa12df4a9fbe> <https://schema.org/familyName> "Vona" .
+<urn:uuid:2a14f37a-8b1d-4233-a266-aa12df4a9fbe> <https://schema.org/givenName> "István" .
+<urn:uuid:371a78c7-030c-4329-932f-4357d76ebf1c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:371a78c7-030c-4329-932f-4357d76ebf1c> <https://schema.org/familyName> "Sharipov" .
+<urn:uuid:371a78c7-030c-4329-932f-4357d76ebf1c> <https://schema.org/givenName> "Rustem" .
+<urn:uuid:abc6e461-db2f-499b-8213-d5aa201e7c65> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:abc6e461-db2f-499b-8213-d5aa201e7c65> <https://schema.org/familyName> "Tiutiakina" .
+<urn:uuid:abc6e461-db2f-499b-8213-d5aa201e7c65> <https://schema.org/givenName> "Anastasiia" .
+<urn:uuid:b76ba5be-e103-4bf8-891e-90fb3adbe63b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:b76ba5be-e103-4bf8-891e-90fb3adbe63b> <https://schema.org/familyName> "Pozsgay" .
+<urn:uuid:b76ba5be-e103-4bf8-891e-90fb3adbe63b> <https://schema.org/givenName> "Balázs" .
+

@@ -1,0 +1,25 @@
+<http://hdl.handle.net/1854/LU-480375> <http://purl.org/dc/terms/source> "biblio.ugent.be" .
+<http://hdl.handle.net/1854/LU-480375> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/net/xbiblio/csl#paper-conference> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/abstract> "This paper focuses on the multifaceted use of the OAI-PMH in a repository architecture designed to store digital assets at the Research Library of the Los Alamos National Laboratory (LANL), and to make the stored assets available in a uniform way to various downstream applications. In the architecture, the MPEG-21 Digital Item Declaration Language is used as the XML-based format to represent complex digital objects. Upon ingestion, these objects are stored in a multitude of autonomous OAI-PMH repositories. An OAI-PMH compliant Repository Index keeps track of the creation and location of all those repositories, whereas an Identifier Resolver keeps track of the location of individual objects. An OAI-PMH Federator is introduced as a single-point-of-access to downstream harvesters. It hides the complexity of the environment to those harvesters, and allows them to obtain transformations of stored objects. While the proposed architecture is described in the context of the LANL library, the paper will also touch on its more general applicability." .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:2c25605e-f174-4208-9254-542d1cadaf07> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:327ef136-1084-4856-9bd2-705bc03fa7c1> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:a64c68f9-5661-4fae-8d33-14514ca1c49d> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/author> <urn:uuid:b641de73-2c2f-4088-b8c3-af660f593471> .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/datePublished> "2004" .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/dateRead> "2024-9-23" .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/language> "eng" .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/publication> "JCDL 2004" .
+<http://hdl.handle.net/1854/LU-480375> <https://schema.org/title> "The multi-faceted use of the OAI-PMH in the LANL Repository" .
+<urn:uuid:2c25605e-f174-4208-9254-542d1cadaf07> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:2c25605e-f174-4208-9254-542d1cadaf07> <https://schema.org/familyName> "Jerez" .
+<urn:uuid:2c25605e-f174-4208-9254-542d1cadaf07> <https://schema.org/givenName> "Henry" .
+<urn:uuid:327ef136-1084-4856-9bd2-705bc03fa7c1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:327ef136-1084-4856-9bd2-705bc03fa7c1> <https://schema.org/familyName> "Van de Sompel" .
+<urn:uuid:327ef136-1084-4856-9bd2-705bc03fa7c1> <https://schema.org/givenName> "Herbert" .
+<urn:uuid:a64c68f9-5661-4fae-8d33-14514ca1c49d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:a64c68f9-5661-4fae-8d33-14514ca1c49d> <https://schema.org/familyName> "Liu" .
+<urn:uuid:a64c68f9-5661-4fae-8d33-14514ca1c49d> <https://schema.org/givenName> "Xiaoming" .
+<urn:uuid:b641de73-2c2f-4088-b8c3-af660f593471> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:b641de73-2c2f-4088-b8c3-af660f593471> <https://schema.org/familyName> "Hochstenbach" .
+<urn:uuid:b641de73-2c2f-4088-b8c3-af660f593471> <https://schema.org/givenName> "Patrick" .
+

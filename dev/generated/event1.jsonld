@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.org/",
+    "schema": "https://schema.org/",
+    "claim": "https://mycontributions.info/ns",
+    "id": "@id",
+    "type": "@type",
+    "about": {
+      "@id": "schema:about",
+      "@type": "@id",
+      "@container": [
+        "@graph",
+        "@id"
+      ]
+    },
+    "mainEntity": {
+      "@id": "schema:mainEntity",
+      "@type": "@id"
+    },
+    "claimProfile": {
+      "@id": "claim:claimProfile",
+      "@type": "@id"
+    },
+    "verificationProfile": {
+      "@id": "claim:verificationProfile",
+      "@type": "@id"
+    }
+  },
+  "id": "urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313",
+  "type": "Claim",
+  "about": {
+    "urn:uuid:47c8af1f-4882-4953-aada-2ccbdcfddd08": {
+      "id": "https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html",
+      "type": "http://purl.org/net/xbiblio/csl#webpage",
+      "dateRead": "2025-2-26",
+      "title": "Reference Linking in a Hybrid Library Enivonment Part 2: SFX, a Generic Linking Solution"
+    }
+  },
+  "mainEntity": "https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html",
+  "creator": {
+    "id": "https://mastodon.social/@patrickhochstenbach",
+    "type": "Person",
+    "https://mycontributions.info/ns#claimProfile": {
+      "id": "https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171"
+    },
+    "https://mycontributions.info/ns#verificationProfile": {
+      "id": "https://mycontributions.info/profiles/9010.html"
+    },
+    "name": "patrickhochstenbach"
+  },
+  "isBasedOn": {
+    "id": "https://mastodon.social/@patrickhochstenbach/114069052052314604"
+  },
+  "sdDatePublished": "2025-02-26T07:40:07.328Z",
+  "sdPublisher": {
+    "id": "https://claimbot.surf.nl/profile/card#me",
+    "type": "Service",
+    "name": "SURF Claim Bot"
+  }
+}

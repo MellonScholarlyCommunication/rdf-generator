@@ -1,0 +1,10 @@
+<https://www.youtube.com/watch?v=rv3Yq-B8qp4> <http://purl.org/dc/terms/source> "YouTube" .
+<https://www.youtube.com/watch?v=rv3Yq-B8qp4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/net/xbiblio/csl#motion_picture> .
+<https://www.youtube.com/watch?v=rv3Yq-B8qp4> <https://schema.org/abstract> "Svelte is a JS library for building reactive UI components. But unlike React, Angular, and Vue, it does not ship a runtime like Virtual DOM to the browser ht..." .
+<https://www.youtube.com/watch?v=rv3Yq-B8qp4> <https://schema.org/author> <urn:uuid:86156f20-d5b9-477c-aefd-5d04fc2570f3> .
+<https://www.youtube.com/watch?v=rv3Yq-B8qp4> <https://schema.org/datePublished> "2021" .
+<https://www.youtube.com/watch?v=rv3Yq-B8qp4> <https://schema.org/dateRead> "2024-11-20" .
+<https://www.youtube.com/watch?v=rv3Yq-B8qp4> <https://schema.org/title> "Svelte in 100 Seconds" .
+<urn:uuid:86156f20-d5b9-477c-aefd-5d04fc2570f3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<urn:uuid:86156f20-d5b9-477c-aefd-5d04fc2570f3> <https://schema.org/name> "Fireship" .
+

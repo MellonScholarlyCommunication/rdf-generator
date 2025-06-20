@@ -32,7 +32,7 @@ async function handle(req,res,options) {
 
     const traceLog = {
         "@context" : "https://labs.eventnotifications.net/contexts/eventlog.jsonld",
-        "id": `${process.env.CLAIMLOG_BASEURL}${req.url}`, 
+        "id": `${process.env.CLAIMLOG_URL}${req.url}`, 
         "type": "EventLog",
         "artifact": artifact,
         "member": []
@@ -42,7 +42,7 @@ async function handle(req,res,options) {
         const claim = claims[i];
         const checksum = md5(makeEvent(claim));
         traceLog.member.push({
-            id: `${process.env.CLAIMLOG_BASEURL}${parsedUrl.pathname}/${claim.id}` ,
+            id: `${process.env.CLAIMLOG_URL}${parsedUrl.pathname}/${claim.id}` ,
             created: claim.sdDatePublished,
             checksum: {
                 type: "Checksum",

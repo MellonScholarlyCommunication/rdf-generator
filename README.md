@@ -175,7 +175,7 @@ The JSON-LD frame for the claims can be found in `./config/claim.jsonld` and is 
 - `RMLMAP` : the RML map to used to generate RDF from CSL
 - `TEMPDIR` : a temporary process directory
 - `CONTEXT_URL` : the URL of the published JSON-LD frame for claims
-- `CLAIMLOG_BASEURL` : the base URL of the claim log inbox and trace service
+- `CLAIMLOG_URL` : the base URL of the claim log inbox and trace service
 
 ## Docker
 

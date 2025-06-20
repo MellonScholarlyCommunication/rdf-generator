@@ -4,8 +4,6 @@ const logger = getLogger();
 const fs = require('fs');
 const fsPath = require('path');
 
-const METADATA_ACTOR = "https://mycontributions.info/service/x/profile/card#me";
-
 async function handle({path,options,config,notification}) {
     if (! config) {
         logger.error('no configuration found');
@@ -32,7 +30,7 @@ async function handle({path,options,config,notification}) {
         const parsed = await parseTrace(trace_url);
 
         if (! parsed) {
-            logger.error(`failed to parse notification`);
+            logger.error(`failed to parse notification ${trace_url}`);
             return { path, options, success: false };
         }
 
@@ -78,6 +76,8 @@ async function parseTrace(url) {
         let triggerNotification;
         let metadataNotification;
 
+        logger.info(`trying to find Announce-s from ${process.env.METADATA_ACTOR}...`);
+
         for (let i = 0 ; i < trace.member.length ; i++) {
             const member = trace.member[i];
             const id = member.id;
@@ -87,6 +87,7 @@ async function parseTrace(url) {
 
             if (!response.ok) {
                 logger.error(`failed to fetch ${id}`);
+                continue;
             }
 
             const candidateNotification = await response.json();
@@ -94,7 +95,7 @@ async function parseTrace(url) {
             if (i == 0) {
                 triggerNotification = candidateNotification;
             }
-            else if (candidateNotification.actor.id === METADATA_ACTOR) {
+            else if (candidateNotification.actor.id === process.env.METADATA_ACTOR) {
                 metadataNotification = candidateNotification;
                 break;
             }

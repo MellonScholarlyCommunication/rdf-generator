@@ -1,14 +1,7 @@
+const CLAIM_BASE = 'https://mycontributions.info/service/c';
+
 function claimUrl(url) {
-    let claim_base;
-
-    if (CLAIM_BASE) {
-        claim_base = CLAIM_BASE;
-    }
-    else {
-        claim_base = 'https://mycontributions.info/service/c';
-    }
-
-    return claim_base + '/trace?artifact=' + url;
+    return CLAIM_BASE + '/trace?artifact=' + url;
 }
 
 async function fetchClaims(url) {

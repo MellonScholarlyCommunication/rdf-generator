@@ -9,7 +9,7 @@
                     "anyOf": [ 
                         [ 
                             { "path": "$.type" , "value": "Announce" } ,
-                            { "path": "$.origin.id" , "value": "https://mycontributions.info/service/m/profile/card#me" }
+                            { "path": "$.actor.id" , "value": "https://mycontributions.info/service/m/profile/card#me" }
                         ]
                     ]
                  },

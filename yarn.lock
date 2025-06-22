@@ -1224,10 +1224,10 @@ ky@^0.33.3:
   resolved "https://registry.npmjs.org/ky/-/ky-0.33.3.tgz"
   integrity sha512-CasD9OCEQSFIam2U8efFK81Yeg8vNMTBUqtMOHlrcWQHqUX3HeCl9Dr31u4toV7emlH8Mymk5+9p0lL6mKb/Xw==
 
-ldn-inbox-server@^1.8.3:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/ldn-inbox-server/-/ldn-inbox-server-1.8.3.tgz#5ec6c047ba32fe8d2469b58aa9c6f33d036dbe28"
-  integrity sha512-52mQiwAyXF/El0t1NpalpT3tr3cgbIsdzqST/iPPCBlmcsiuyDuS838Bsph77bu3Lq59FJOQre0HXUZiUcVb2Q==
+ldn-inbox-server@^1.8.4:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/ldn-inbox-server/-/ldn-inbox-server-1.8.4.tgz#48a6483bedbc35ac319e683636f32c229fb7125d"
+  integrity sha512-ywox8s3aU2xh2qZs0hjnVICUtXbcD1JjqAqOidE7Al6/aLqGqLkDwiyCs/cB0X54uLosXvsK/grm2XtPVacz5g==
   dependencies:
     chokidar "^3.6.0"
     commander "^12.0.0"

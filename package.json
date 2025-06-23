@@ -25,7 +25,7 @@
     "@rmlio/rmlmapper-java-wrapper": "^2.1.2",
     "commander": "^12.1.0",
     "dotenv": "^16.4.5",
-    "eventlog-server": "git+https://github.com/MellonScholarlyCommunication/eventlog-server.git",
+    "eventlog-server": "https://github.com/MellonScholarlyCommunication/eventlog-server.git",
     "jsonld": "^8.3.2",
     "ldn-inbox-server": "^1.8.4",
     "log4js": "^6.9.1",

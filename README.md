@@ -74,39 +74,6 @@ For the mapping we use RDF Mapping Language from [RML.io](https://rml.io). See
 <https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> <https://schema.org/title> "Reference Linking in a Hybrid Library Enivronment Part 2: SFX, a Generic Linking Solution" .
 ```
 
-```
-./bin/rdf_admin.js event2rdf --origin=dev/event1-origin.json dev/event1.json
-<urn:uuid:c2006a89-8d73-47d6-a165-6c82e1939f35> {
-<https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> a <http://purl.org/net/xbiblio/csl#webpage>;
-    <https://schema.org/title> "Reference Linking in a Hybrid Library Enivonment Part 2: SFX, a Generic Linking Solution"
-}
-<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> a <https://schema.org/Claim>;
-    <https://schema.org/about> <urn:uuid:c2006a89-8d73-47d6-a165-6c82e1939f35>;
-    <https://schema.org/creator> 
-      <https://mastodon.social/@patrickhochstenbach>.
-<https://mastodon.social/@patrickhochstenbach> 
-    a <https://schema.org/Person>;
-    <https://schema.org/name> "patrickhochstenbach";
-    <https://mycontributions.info/ns#claimProfile> 
-      <https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171>;
-    <https://mycontributions.info/ns#verificationProfile> 
-      <https://mycontributions.info/profiles/9010.html>.
-<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> 
-    <https://schema.org/sdPublisher> 
-      <https://claimbot.surf.nl/profile/card#me>.
-<https://claimbot.surf.nl/profile/card#me> 
-    a <https://schema.org/Service>;
-    <https://schema.org/name> "SURF Claim Bot".
-<urn:uuid:ad3838e2-252b-4db2-b31d-caeedbb87313> 
-    <https://schema.org/sdDatePublished> 
-      "2025-02-26T07:40:07.328Z";
-    <https://schema.org/isBasedOn> 
-      <https://mastodon.social/@patrickhochstenbach/114069052052314604>;
-    <https://schema.org/mainEntity> 
-      <https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html>.
-```
-
-
 ## Create a claims database
 
 Create the database:

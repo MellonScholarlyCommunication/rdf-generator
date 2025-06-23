@@ -2,7 +2,7 @@
 const { program } = require('commander');
 
 const fetch = require('node-fetch');
-const { generateQuads, serializeQuads, annotateByOrigin } = require('../lib/index');
+const { generateQuads, serializeQuads } = require('../lib/index');
 const { internalImport } = require('../lib/import');
 const cache = require('eventlog-server');
 const fs = require('fs');
@@ -51,48 +51,6 @@ program
 
             console.log(await serializeQuads(quads, { format: format , frame: frame }));
         }
-    });
-
-program
-    .command('event2rdf')
-    .option('--cache <cache>','cache name','cache')
-    .option('-f,--format <format>','output format','application/trig')
-    .option('-r,--frame <frame>','jsonld frame')
-    .option('--origin <origin>','Original Event')
-    .argument('<file>','Event file | URL | id')
-    .action( async(file,opts) => {
-        const all_opts = { ...opts, ...program.opts() };
-        const rmlmapperPath = fsPath.resolve(all_opts.jar);
-        const rmlmappingPath = fsPath.resolve(all_opts.map);
-        const tempFolderPath = fsPath.resolve(all_opts.tmp);
-
-        let frame;
-
-        if (opts.frame) {
-            frame = JSON.parse(fs.readFileSync(opts.frame,'utf8'));
-        }
-
-        const data = await resolve(file, { name: all_opts.cache});
-
-        const referred_csl = await resolve(data.object.id);
-
-        const map = fs.readFileSync(rmlmappingPath,'utf-8');
-            
-        const param = {
-            rmlMapper : rmlmapperPath ,
-            rmlMap : map,
-            tmp : tempFolderPath ,
-            mainTopic : data.context
-        };
-
-        let quads = await generateQuads(referred_csl, param);
-
-        if (opts.origin) {
-            const origin = await resolve(opts.origin, { name: all_opts.cache });
-            quads = await annotateByOrigin(quads,origin);
-        }
-
-        console.log(await serializeQuads(quads, { format: opts.format , frame: frame }));
     });
 
 program

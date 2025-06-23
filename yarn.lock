@@ -1255,7 +1255,7 @@ levn@~0.3.0:
 
 log4js@^6.9.1:
   version "6.9.1"
-  resolved "https://registry.npmjs.org/log4js/-/log4js-6.9.1.tgz"
+  resolved "https://registry.yarnpkg.com/log4js/-/log4js-6.9.1.tgz#aba5a3ff4e7872ae34f8b4c533706753709e38b6"
   integrity sha512-1somDdy9sChrr9/f4UlzhdaGfDR2c/SaD2a4T7qEkG4jTS57/B3qmnjLYePwQ8cqWnUHZI0iAKxMBpCZICiZ2g==
   dependencies:
     date-format "^4.0.14"

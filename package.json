@@ -28,6 +28,7 @@
     "eventlog-server": "git+https://github.com/MellonScholarlyCommunication/eventlog-server.git",
     "jsonld": "^8.3.2",
     "ldn-inbox-server": "^1.8.4",
+    "log4js": "^6.9.1",
     "memoizee": "^0.4.17",
     "n3": "^1.22.3",
     "node-fetch": "2.7.0",

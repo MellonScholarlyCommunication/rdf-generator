@@ -188,6 +188,13 @@
   ];
 
   rr:predicateObjectMap [ 
+    rr:predicate schema:position; 
+    rr:objectMap [
+      rml:reference "position"
+    ]
+  ];
+
+  rr:predicateObjectMap [ 
     rr:predicate schema:givenName; 
     rr:objectMap [
       rml:reference "given"
@@ -229,13 +236,21 @@
   ];
 
   rr:predicateObjectMap [ 
+    rr:predicate schema:position; 
+    rr:objectMap [
+      rml:reference "position"
+    ]
+  ];
+
+
+  rr:predicateObjectMap [ 
     rr:predicate schema:givenName; 
     rr:objectMap [
       rml:reference "given"
     ]
   ];
 
-    rr:predicateObjectMap [ 
+  rr:predicateObjectMap [ 
     rr:predicate schema:familyName; 
     rr:objectMap [
       rml:reference "family"

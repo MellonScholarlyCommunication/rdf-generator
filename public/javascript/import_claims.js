@@ -36,21 +36,25 @@ function createCitation(data) {
         if (Array.isArray(about['author'])) {
             const authors = [];
             about['author'].forEach( auth => {
-                if (auth['familyName'] && auth['givenName']) {
-                    authors.push(`${auth['familyName']}, ${auth['givenName'].substr(0,1)}`);
+                const familyName = auth['familyName'];
+                const givenName = auth['givenName'];
+                if (familyName !== "" && givenName !== "") {
+                    authors.push(`${familyName}, ${givenName.substr(0,1)}`);
                 }
-                else if (auth['familyName']) {
-                    authors.push(`${auth['familyName']}`); 
+                else if (familyName !== "") {
+                    authors.push(familyName); 
                 }
             });
             citation.push(authors.join(", "));
         }
         else if (isObject(about['author'])) {
-            if (about['author']['familyName'] && about['author']['givenName']) {
-                citation.push(`${about['author']['familyName']}, ${about['author']['givenName'].substr(0,1)}`);
+            const familyName = ensureString(about['author']['familyName']);
+            const givenName = ensureString(about['author']['givenName']);
+            if (familyName !== "" && givenName !== "") {
+                citation.push(`${familyName}, ${givenName.substr(0,1)}`);
             }
-            else if (about['author']['familyName']) {
-                citation.push(`${about['author']['familyName']}`); 
+            else if (familyName !== "") {
+                citation.push(familyName); 
             } 
         }
 
@@ -58,22 +62,22 @@ function createCitation(data) {
     }
 
     if (hasAuthor && about['datePublished']) {
-        citation.push(`(${about['datePublished']})`);
+        citation.push(`(${ensureString(about['datePublished'])})`);
     }
 
     if (about['title']) {
-        citation.push(`<i>${about['title']}</i>`);
+        citation.push(`<i>${ensureString(about['title'])}</i>`);
     }
 
     if (!hasAuthor && about['datePublished']) {
-        citation.push(`(${about['datePublished']})`);
+        citation.push(`(${ensureString(about['datePublished'])})`);
     }
 
     if (about['publisher']) {
-        citation.push(about['publisher']);
+        citation.push(ensureString(about['publisher']));
     }
     else {
-        const publisher = about['id']
+        const publisher = ensureString(about['id'])
                             .replaceAll(/^https?:\/\//g,'')
                             .replaceAll(/\/.*/g,'')
                             .toUpperCase();
@@ -81,12 +85,30 @@ function createCitation(data) {
     }
 
     if (about['dateRead']) {
-        citation.push(`Accessed ${about['dateRead']}`);
+        citation.push(`Accessed ${ensureString(about['dateRead'])}`);
     }
 
     citation.push(`<a href="${about['id']}">[Full Text]</a>`);
 
     return citation.filter(n=>n.match(/\S/)).join(". ");
+}
+
+function ensureString(value) {
+    if (!value) {
+        return "";
+    }
+    else if (typeof value === 'string' || value instanceof String) {
+        return value;
+    }
+    else if (Array.isArray(value)) {
+        return value.join(" ");
+    }
+    else if (typeof value === 'object') {
+        return "<OBJECT>";
+    }
+    else {
+        return "";
+    } 
 }
 
 function isObject (value) {  

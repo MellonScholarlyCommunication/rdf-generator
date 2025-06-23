@@ -35,7 +35,7 @@ function createCitation(data) {
     if (about['author']) {
         if (Array.isArray(about['author'])) {
             const authors = [];
-            about['author'].forEach( auth => {
+            sortedAuthors(about['author']).forEach( auth => {
                 const familyName = auth['familyName'];
                 const givenName = auth['givenName'];
                 if (familyName !== "" && givenName !== "") {
@@ -91,6 +91,18 @@ function createCitation(data) {
     citation.push(`<a href="${about['id']}">[Full Text]</a>`);
 
     return citation.filter(n=>n.match(/\S/)).join(". ");
+}
+
+function sortedAuthors(authors) {
+    if (!authors) {
+        return authors;
+    }
+    else if (! authors[0]['position']) {
+        return authors;
+    }
+    else {
+        return authors.slice().sort( (a,b) => a.position - b.position );
+    }
 }
 
 function ensureString(value) {

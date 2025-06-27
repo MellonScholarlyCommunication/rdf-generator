@@ -855,9 +855,9 @@ event-target-shim@^5.0.0:
   resolved "https://registry.npmjs.org/event-target-shim/-/event-target-shim-5.0.1.tgz"
   integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
-"eventlog-server@git+https://github.com/MellonScholarlyCommunication/eventlog-server.git":
+"eventlog-server@https://github.com/MellonScholarlyCommunication/eventlog-server.git":
   version "1.0.0"
-  resolved "git+ssh://git@github.com/MellonScholarlyCommunication/eventlog-server.git#b878915f16fb1044dc91ed2057279bb18844262d"
+  resolved "https://github.com/MellonScholarlyCommunication/eventlog-server.git#3559177395d380eb098e270595b7515e6ccd7e51"
   dependencies:
     chalk "2.4.2"
     commander "^12.1.0"
@@ -1224,10 +1224,10 @@ ky@^0.33.3:
   resolved "https://registry.npmjs.org/ky/-/ky-0.33.3.tgz"
   integrity sha512-CasD9OCEQSFIam2U8efFK81Yeg8vNMTBUqtMOHlrcWQHqUX3HeCl9Dr31u4toV7emlH8Mymk5+9p0lL6mKb/Xw==
 
-ldn-inbox-server@^1.8.4:
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/ldn-inbox-server/-/ldn-inbox-server-1.8.4.tgz#48a6483bedbc35ac319e683636f32c229fb7125d"
-  integrity sha512-ywox8s3aU2xh2qZs0hjnVICUtXbcD1JjqAqOidE7Al6/aLqGqLkDwiyCs/cB0X54uLosXvsK/grm2XtPVacz5g==
+ldn-inbox-server@^1.8.5:
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/ldn-inbox-server/-/ldn-inbox-server-1.8.5.tgz#fd490f46b12991a49e885c6d570e5b20374f268c"
+  integrity sha512-hATDU6i25K8gWNFBwcZDNDeabSZKwRWSs+/vzCXuFGCynSjQDTOIzCTBzyaTPbcfQPUgFtnsiqkmjsbLtj0Vkw==
   dependencies:
     chokidar "^3.6.0"
     commander "^12.0.0"

@@ -19,7 +19,9 @@
     "server": "npx ldn-inbox-server start-server --port 3006",
     "demo-notification": "cp import/demo-notification* ./inbox",
     "demo-post": "curl -X POST -H 'Content-Type: application/ld+json' --data-binary '@import/demo-notification-1.jsonld' http://localhost:3006/inbox/",
-    "handle-inbox": "npx ldn-inbox-server handler @inbox -hn @handler/notification_handler/multi.js"
+    "handle-inbox": "npx ldn-inbox-server handler @inbox -hn @handler/notification_handler/multi.js",
+    "docker-build": "docker build . -t hochstenbach/rdf-generator:v0.0.2" ,
+    "docker-push": "docker push hochstenbach/rdf-generator:v0.0.2"
   },
   "dependencies": {
     "@rmlio/rmlmapper-java-wrapper": "^2.1.2",
@@ -27,7 +29,7 @@
     "dotenv": "^16.4.5",
     "eventlog-server": "https://github.com/MellonScholarlyCommunication/eventlog-server.git",
     "jsonld": "^8.3.2",
-    "ldn-inbox-server": "^1.8.4",
+    "ldn-inbox-server": "^1.8.5",
     "log4js": "^6.9.1",
     "memoizee": "^0.4.17",
     "n3": "^1.22.3",

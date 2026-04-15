@@ -1,0 +1,22 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:437fa9a5-35eb-47ca-a8e3-c0e839ae677d",
+  "type": "Announce",
+  "published": "2026-04-09T09:12:53.420Z",
+  "actor": {
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "name": "Mastodon Bot",
+    "inbox": "https://mycontributions.info/service/m/inbox/",
+    "type": "Service"
+  },
+  "object": {
+    "id": "https://mycontributions.info/service/e/trace?claim=urn:uuid:bdf1a70d-5e70-4faf-90e7-688c3a3cd7db",
+    "type": "Document"
+  },
+  "target": {
+    "id": "https://mycontributions.info/service/c/profile/card#me",
+    "name": "ClaimLog Service",
+    "inbox": "https://mycontributions.info/service/c/inbox/",
+    "type": "Service"
+  }
+}

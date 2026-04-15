@@ -1,0 +1,22 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:2097dee2-ad98-40a2-836b-061109e5e672",
+  "type": "Offer",
+  "published": "2026-04-09T09:12:41.646Z",
+  "actor": {
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "name": "Mastodon Bot",
+    "inbox": "https://mycontributions.info/service/m/inbox/",
+    "type": "Service"
+  },
+  "object": {
+    "id": "https://nos.nl/artikel/2609676-voedingscentrum-vernieuwt-schijf-van-vijf-maximaal-een-gehaktbal-per-week",
+    "type": "Document"
+  },
+  "target": {
+    "id": "https://mycontributions.info/service/x/profile/card#me",
+    "name": "Zotero Web Service",
+    "inbox": "https://mycontributions.info/service/x/inbox/",
+    "type": "Service"
+  }
+}

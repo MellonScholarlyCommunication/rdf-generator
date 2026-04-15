@@ -1,0 +1,24 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:a9076c1e-fa30-4cfa-a58c-7b9883065147",
+  "type": "Offer",
+  "published": "2026-04-09T09:12:53.176Z",
+  "actor": {
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "name": "Mastodon Bot",
+    "inbox": "https://mycontributions.info/service/m/inbox/",
+    "type": "Service"
+  },
+  "context": "https://wiki.mycontributions.info/en/researcher/orcid/0000-0000-0000-0010",
+  "object": {
+    "id": "urn:uuid:cccc261d-9cc5-413b-8b56-1a866c5f5991",
+    "content": "<div class=\"csl-bib-body\">\n  <div data-csl-entry-id=\"9APJ3KBK\" class=\"csl-entry\"><i>Voedingscentrum vernieuwt Schijf van Vijf: maximaal één gehaktbal per week</i>. (2026, April 9). https://nos.nl/artikel/2609676-voedingscentrum-vernieuwt-schijf-van-vijf-maximaal-een-gehaktbal-per-week?utm_source=twitter</div>\n</div>",
+    "type": "Note"
+  },
+  "target": {
+    "id": "https://wiki.mycontributions.info/profile/card#me",
+    "name": "Wiki.JS",
+    "inbox": "https://wiki.mycontributions.info/inbox/",
+    "type": "Service"
+  }
+}

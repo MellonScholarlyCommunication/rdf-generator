@@ -1,0 +1,24 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:b35a7539-5d5a-4b1a-8f99-80d1b7d4e606",
+  "type": "Announce",
+  "published": "2026-04-09T09:12:53.401Z",
+  "actor": {
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "name": "Mastodon Bot",
+    "inbox": "https://mycontributions.info/service/m/inbox/",
+    "type": "Service"
+  },
+  "context": "https://research.test.edu.nl/@alsvanounds/116373976286838059",
+  "object": {
+    "id": "urn:uuid:2a90cae5-f1d1-4a89-9c4e-f90288c10a15",
+    "type": "Note",
+    "content": "I updated your researcher contributions https://wiki.mycontributions.info/en/researcher/orcid/0000-0000-0000-0010 :)"
+  },
+  "target": {
+    "id": "https://research.test.edu.nl/@alsvanounds",
+    "name": "Fetze Alsvanouds",
+    "inbox": "https://research.test.edu.nl/users/alsvanounds/inbox",
+    "type": "Person"
+  }
+}

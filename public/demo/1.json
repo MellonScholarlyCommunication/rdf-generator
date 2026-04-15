@@ -1,0 +1,34 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:bdf1a70d-5e70-4faf-90e7-688c3a3cd7db",
+  "type": "Announce",
+  "published": "2026-04-09T09:12:39.177Z",
+  "actor": {
+    "id": "https://research.test.edu.nl/@alsvanounds",
+    "name": "Fetze Alsvanouds",
+    "inbox": "https://research.test.edu.nl/users/alsvanounds/inbox",
+    "type": "Person"
+  },
+  "origin": {
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "name": "Mastodon Bot",
+    "inbox": "https://mycontributions.info/service/m/inbox/",
+    "type": "Service"
+  },
+  "object": {
+    "id": "https://research.test.edu.nl/@alsvanounds/116373976286838059",
+    "content": "<p>Ik was weer bij de NOS <a href=\"https://nos.nl/artikel/2609676-voedingscentrum-vernieuwt-schijf-van-vijf-maximaal-een-gehaktbal-per-week\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">nos.nl/artikel/2609676-voeding</span><span class=\"invisible\">scentrum-vernieuwt-schijf-van-vijf-maximaal-een-gehaktbal-per-week</span></a></p><p><span class=\"h-card\" translate=\"no\"><a href=\"https://mas.to/@claimbot\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>claimbot</span></a></span></p>",
+    "url": [
+      {
+        "type": "Link",
+        "href": "https://nos.nl/artikel/2609676-voedingscentrum-vernieuwt-schijf-van-vijf-maximaal-een-gehaktbal-per-week"
+      }
+    ],
+    "type": "Note"
+  },
+  "generator": {
+    "id": "https://www.npmjs.com/package/mastodon-cli",
+    "type": "Application",
+    "context": "https://research.test.edu.nl/@alsvanounds/116373976286838059"
+  }
+}

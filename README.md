@@ -76,6 +76,24 @@ For the mapping we use RDF Mapping Language from [RML.io](https://rml.io). See
 <https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> <https://schema.org/title> "Reference Linking in a Hybrid Library Enivronment Part 2: SFX, a Generic Linking Solution" .
 ```
 
+## Start the local database
+
+```
+yarn db-start
+```
+
+Stop the database with:
+
+```
+yarn db-stop
+```
+
+Execute an interactive psql shell 
+
+```
+yarn db-shell
+```
+
 ## Create a claims database
 
 Create the database:
@@ -86,6 +104,8 @@ npx event_admin init --name claims
 
 ## Import data locally 
 
+**Requires a local `cache` database (e.g. when running on the same server as the eventlog-server)**
+
 Import data from a local 'cache' database (see eventlog-server) into the 'claims' database:
 
 ```
@@ -93,24 +113,6 @@ Import data from a local 'cache' database (see eventlog-server) into the 'claims
 ```
 
 By default, existing RDF data will not be overwritten. Use the `--overwrite` option to overwrite old data/
-
-Export all claims as JSONLD
-
-```
-npx event_admin export --intention rdf
-```
-
-Export all claims as NQuads:
-
-```
-npx event_admin export --intention rdf | ./bin/jsonls2nquads.js /dev/stdin
-```
-
-Remove all the data from the claims database:
-
-```
-npx event_admin remove-all --name claims
-```
 
 ## Import data remotely 
 
@@ -132,6 +134,40 @@ Post an Event trace to the inbox to generate a new Claim RDF:
 
 ```
 curl -X POST -H 'Content-Type: application/ld+json' --data-binary '@import/demo-notification-1.jsonld' http://localhost:3006/inbox/
+```
+
+or
+
+```
+yarn demo-post
+```
+
+Start one run of the LDN inbox handler to process the incoming notification:
+
+```
+yarn handle-inbox
+```
+
+## Export data
+
+Export all claims as JSONLD:
+
+```
+npx event_admin export --intention rdf
+```
+
+Export all claims as NQuads:
+
+```
+npx event_admin export --intention rdf | ./bin/jsonld2nquads.js /dev/stdin
+```
+
+## Remove data
+
+Remove all the data from the claims database:
+
+```
+npx event_admin remove-all --name claims
 ```
 
 ## Configuration Options
@@ -173,3 +209,7 @@ The base URL of the claimlog service.
 **RDF CONFIGURATION**
 
 - `CONTEXT_URL` : the URL of the published JSON-LD frame for claims
+
+**IMPORT CONFIGURATION**
+
+- `METADATA_ACTOR` : when importing metadata remotely, the URL in this configuration should match the WebID of the trusted metadata summarizer

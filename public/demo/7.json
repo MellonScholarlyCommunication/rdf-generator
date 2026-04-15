@@ -1,0 +1,23 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:a87c6dd7-602b-4bbe-9d86-0107622a2d67",
+  "type": "Announce",
+  "published": "2026-04-09T09:12:53.192Z",
+  "actor": {
+    "id": "https://wiki.mycontributions.info/profile/card#me",
+    "name": "Wiki.JS",
+    "inbox": "https://wiki.mycontributions.info/inbox/",
+    "type": "Service"
+  },
+  "context": "https://research.test.edu.nl/@alsvanounds/116373976286838059",
+  "object": {
+    "id": "https://wiki.mycontributions.info/en/researcher/orcid/0000-0000-0000-0010",
+    "type": "WebPage"
+  },
+  "target": {
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "name": "Mastodon Bot",
+    "inbox": "https://mycontributions.info/service/m/inbox/",
+    "type": "Service"
+  }
+}

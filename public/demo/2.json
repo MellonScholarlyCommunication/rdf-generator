@@ -1,0 +1,22 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:b3889b4d-e471-4a11-b564-b205e86f143f",
+  "type": "View",
+  "published": "2026-04-09T09:12:41.528Z",
+  "actor": {
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "name": "Mastodon Bot",
+    "inbox": "https://mycontributions.info/service/m/inbox/",
+    "type": "Service"
+  },
+  "object": {
+    "id": "https://research.test.edu.nl/@alsvanounds",
+    "type": "Document"
+  },
+  "target": {
+    "id": "https://research.test.edu.nl/@alsvanounds",
+    "name": "Fetze Alsvanouds",
+    "inbox": "https://research.test.edu.nl/users/alsvanounds/inbox",
+    "type": "Person"
+  }
+}

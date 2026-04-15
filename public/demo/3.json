@@ -1,0 +1,22 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:c72aca85-f8e4-4c1b-ad3d-fc316281f400",
+  "type": "View",
+  "published": "2026-04-09T09:12:41.620Z",
+  "actor": {
+    "id": "https://mycontributions.info/service/m/profile/card#me",
+    "name": "Mastodon Bot",
+    "inbox": "https://mycontributions.info/service/m/inbox/",
+    "type": "Service"
+  },
+  "object": {
+    "id": "https://mycontributions.info/profiles/9009.html",
+    "type": "Document"
+  },
+  "target": {
+    "id": "https://mycontributions.info/profiles/",
+    "name": "Verification Service",
+    "inbox": "https://mycontributions.info/profiles/inbox/",
+    "type": "Service"
+  }
+}

@@ -9,7 +9,7 @@
       "type": "Service"
    },
    "object" : {
-      "id" : "https://mycontributions.info/service/e/trace?artifact=https://research.test.edu.nl/@alsvanounds/114511941728655520",
+      "id" : "http://localhost:3006/demo/demo.json",
       "type" : "Document"
    },
    "origin" : {

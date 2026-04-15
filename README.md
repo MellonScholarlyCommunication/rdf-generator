@@ -76,7 +76,17 @@ For the mapping we use RDF Mapping Language from [RML.io](https://rml.io). See
 <https://www.dlib.org/dlib/april99/van_de_sompel/04van_de_sompel-pt2.html> <https://schema.org/title> "Reference Linking in a Hybrid Library Enivronment Part 2: SFX, a Generic Linking Solution" .
 ```
 
-## Start the local database
+## Claimlog Server
+
+A web service can be provided that automatically transforms CSL claims into RDF claims. Two options are available:
+
+1) Run a claimlog server on the same server as an eventlog-server and import the eventlog of the claimbot
+2) Start a claimlog service with Event Notifications
+   - A claim log can send a notification to the claimlog to read a CSL from a remote eventlog server
+
+The steps below will demonstrate both options.
+
+### Start the local database
 
 ```
 yarn db-start
@@ -94,7 +104,7 @@ Execute an interactive psql shell
 yarn db-shell
 ```
 
-## Create a claims database
+### Create a claims database
 
 Create the database:
 
@@ -102,7 +112,7 @@ Create the database:
 npx event_admin init --name claims
 ```
 
-## Import data locally 
+### Import data locally 
 
 **Requires a local `cache` database (e.g. when running on the same server as the eventlog-server)**
 
@@ -114,7 +124,7 @@ Import data from a local 'cache' database (see eventlog-server) into the 'claims
 
 By default, existing RDF data will not be overwritten. Use the `--overwrite` option to overwrite old data/
 
-## Import data remotely 
+### Import data remotely 
 
 Start a server that provides an LDN inbox:
 
@@ -148,7 +158,7 @@ Start one run of the LDN inbox handler to process the incoming notification:
 yarn handle-inbox
 ```
 
-## Export data
+### Export data
 
 Export all claims as JSONLD:
 
@@ -162,13 +172,25 @@ Export all claims as NQuads:
 npx event_admin export --intention rdf | ./bin/jsonld2nquads.js /dev/stdin
 ```
 
-## Remove data
+### Remove data
 
 Remove all the data from the claims database:
 
 ```
 npx event_admin remove-all --name claims
 ```
+
+### Public claim lookup
+
+The claimlog server installation also includes a small demonstrator how the claims can be presented as a single page app to end users.
+
+http://localhost:3006/#https://research.test.edu.nl/@alsvanounds
+
+where
+
+https://research.test.edu.nl/@alsvanounds 
+
+is the Mastodon profile of a researcher.
 
 ## Configuration Options
 

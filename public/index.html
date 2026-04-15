@@ -29,9 +29,9 @@
                     <label>
                     Enter your Mastodon profile URL:
                     <input
+                        id="artifact-input"
                         name="artifact"
-                        value="https://research.test.edu.nl/@alsvanounds"
-                        placeholder="Profile"
+                        value=""
                     />
                     </label>
                 </fieldset>
@@ -44,6 +44,11 @@
         </main>
         <script>
  $(document).ready(function() {
+    const hashValue = window.location.hash.substring(1);
+
+    let artifact = hashValue || 'https://research.test.edu.nl/@alsvanounds';
+    $('#artifact-input').val(artifact);
+
     $("#myForm").on("submit", async function(event) {
       event.preventDefault(); 
       const artifactValue = $('input[name="artifact"]').val();

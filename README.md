@@ -84,6 +84,8 @@ Create the database:
 npx event_admin init --name claims
 ```
 
+## Import data locally 
+
 Import data from a local 'cache' database (see eventlog-server) into the 'claims' database:
 
 ```
@@ -110,7 +112,9 @@ Remove all the data from the claims database:
 npx event_admin remove-all --name claims
 ```
 
-## Start HTTP Interface
+## Import data remotely 
+
+Start a server that provides an LDN inbox:
 
 ```
 yarn server
@@ -118,9 +122,7 @@ yarn server
 
 Visit: http://localhost:3006/
 
-## LDN Inbox support
-
-Start the LDN inbox handler
+Use the LDN inbox handler to processed incoming request for import of an Event trace:
 
 ```
 yarn handle-inbox
@@ -138,10 +140,36 @@ The [RML](https://rml.io) mapping file used for CSL to RDF mapping can be found 
 
 The JSON-LD frame for the claims can be found in `./config/claim.jsonld` and is published online as https://mycontributions.info/contexts/claim.jsonld
 
-- `CACHE_NAME` : the name of the main event notification cache table
-- `POSTGRES_*` : database connection parameters
+**CLAIMLOG_URL**
+
+The base URL of the claimlog service.
+
+**LDN CONFIGURATION**
+
+- `LDN_SERVER_BASEURL` : The base URL of the claimlog inbox service (that provides a `/inbox/`)
+- LDN_SERVER_PORT : The port of the inbox service
+- LDN_SERVER_PUBLIC_PATH : The path the public served static files
+- LDN_SERVER_INBOX_CONFIG : The handler sequence for incoming notifications
+  - For `@handler/notification_handler/jsonpath_filter.js` the `$.actor.id` value should match the WebID of the claim bot
+- LDN_SERVER_OTHER_CONFIG : Configuration settings for open/hidden inboxes
+  - At least the inbox should be public writable
+  - A public readable inbox is optional (for demo/debug purposes)
+
+**POSTGRES CONFIGURATION**
+
+- `POSTGRES_HOST` : location of the PostgreSQL database (empty: local)
+- `POSTGRES_PORT`
+- `POSTGRES_DATABASE`
+- `POSTGRES_USER`
+- `POSTGRES_PASSWORD`
+- `CACHE_NAME` : name of the claims table
+
+**RMLMAPPER CONFIGURATION**
+
 - `RMLMAPPER` : the path to the RML mapper JAR file
 - `RMLMAP` : the RML map to used to generate RDF from CSL
 - `TEMPDIR` : a temporary process directory
+
+**RDF CONFIGURATION**
+
 - `CONTEXT_URL` : the URL of the published JSON-LD frame for claims
-- `CLAIMLOG_URL` : the base URL of the claim log inbox and trace service

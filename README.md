@@ -16,6 +16,8 @@ yarn run download:rmlmapper
 cp .env-example .env
 ```
 
+The the section "Configuration Options" below.
+
 ## RDF Model
 
 ![Alt text](./claim_summary.svg)
@@ -130,7 +132,7 @@ Post an Event trace to the inbox to generate a new Claim RDF:
 curl -X POST -H 'Content-Type: application/ld+json' --data-binary '@import/demo-notification-1.jsonld' http://localhost:3006/inbox/
 ```
 
-## Config
+## Configuration Options
 
 The [RML](https://rml.io) mapping file used for CSL to RDF mapping can be found in `./config/mapping.ttl`.
 
